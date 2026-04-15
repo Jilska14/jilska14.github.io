@@ -391,8 +391,8 @@ body.panel-open {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.55rem 1rem;
-  background-color: #b33a3a;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.1em;
