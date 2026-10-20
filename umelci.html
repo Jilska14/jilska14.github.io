@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <title>Umělci — Jilská 14 / Výstavní společnost TS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap" rel="stylesheet" />
+
+  <link rel="icon" href="img/gj14.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="img/gj14.ico" type="image/x-icon" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Alphabet jump navigation pills */
+    .year-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(0,0,0,0.15);
+    }
+    .year-pill {
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.3rem 0.6rem;
+      background: rgba(0,0,0,0.06);
+      color: #111;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .year-pill:hover {
+      background: #111;
+      color: #fff;
+    }
+    
+    /* Alphabet section headings */
+    .archive-year-heading {
+      grid-column: 1 / -1;
+      font-size: 1.3rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid currentColor;
+      padding-bottom: 6px;
+      color: #111;
+    }
+
+    /* Square Box Grid Layout */
+    .artist-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .artist-card {
+      aspect-ratio: 1 / 1;
+      background: rgba(255, 255, 255, 0.65);
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+
+    .artist-card:hover {
+      background: rgba(255, 255, 255, 0.95);
+      border-color: #111;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .artist-card-name {
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.15;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #111;
+      margin: 0;
+    }
+
+    .artist-card-exhibitions {
+      font-size: 0.85rem;
+      opacity: 0.75;
+      line-height: 1.4;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Přeskočit na obsah / Skip to content</a>
+
+  <button id="hamburger-btn"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          class="hamburger-btn"
+          aria-haspopup="true">
+    <span></span><span></span><span></span>
+  </button>
+
+  <div class="logo" aria-label="Jilska Logo">
+    <a href="index.html" aria-label="Zpět na úvod / Back to home">
+      <img src="img/logo-jilska.png" alt="Jilská 14" />
+    </a>
+  </div>
+
+  <div class="page-wrap">
+    <header>
+      <nav id="primary-navigation" role="navigation" aria-label="Primary navigation" class="nav-menu">
+        <ul>
+          <li><a href="index.html#" data-lang="cs">Informace pro návštěvníky</a><a href="index.html#" data-lang="en" class="hidden-lang">Information for Visitors</a></li>
+          <li><a href="vystavy.html" data-lang="cs">Výstavy</a><a href="vystavy.html" data-lang="en" class="hidden-lang">Exhibitions</a></li>
+          <li><a href="index.html#" data-lang="cs">Doprovodné programy</a><a href="index.html#" data-lang="en" class="hidden-lang">Additional Programs</a></li>
+          <li><a href="index.html#" data-lang="cs" aria-current="page">Umělci</a><a href="index.html#" data-lang="en" class="hidden-lang" aria-current="page">Artists</a></li>
+          <li><a href="vystavni_spolecnost_ts.html" data-lang="cs">Výstavní společnost TS</a><a href="vystavni_spolecnost_ts.html" data-lang="en" class="hidden-lang">Exhibition Society TS</a></li>
+          <li><a href="index.html#" data-lang="cs">Kontakty</a><a href="index.html#" data-lang="en" class="hidden-lang">Contacts</a></li>
+        </ul>
+      </nav>
+
+      <div class="lang-search-container">
+        <button id="lang-toggle-desktop" aria-label="Přepnout jazyk / Switch language">
+          <span class="dot" aria-hidden="true"></span>
+          <span id="lang-label-desktop">EN</span>
+        </button>
+
+        <div class="search-container-desktop" style="position: relative;">
+          <button id="search-icon-btn-desktop" aria-label="Open search" aria-haspopup="listbox" aria-expanded="false" aria-controls="search-dropdown-desktop">
+            <svg viewBox="0 0 45 45" aria-hidden="true" focusable="false" width="18" height="18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M43.462,35.997l-11.401-11.37c1.197-2.352,1.845-4.962,1.845-7.676c0-4.528-1.765-8.785-4.966-11.986C25.739,1.763,21.481,0,16.953,0C12.426,0,8.167,1.763,4.966,4.965C1.765,8.167,0,12.424,0,16.952
+       c0,4.528,1.764,8.785,4.966,11.986c3.201,3.202,7.459,4.965,11.986,4.965c2.714,0,5.325-0.646,7.675-1.842l11.371,11.402
+       c1.029,1.029,2.382,1.546,3.732,1.546c1.35,0,2.701-0.517,3.731-1.546C45.524,41.4,45.524,38.059,43.462,35.997z 
+       M9.444,24.459c-2.005-2.006-3.109-4.671-3.109-7.507s1.104-5.502,3.11-7.508c2.005-2.005,4.671-3.11,7.507-3.11s5.502,1.104,7.508,3.11
+       c2.005,2.005,3.11,4.671,3.11,7.507s-1.105,5.502-3.11,7.508c-2.006,2.005-4.673,3.109-7.508,3.109
+       C14.117,27.568,11.451,26.465,9.444,24.459z"/>
+            </svg>
+          </button>
+
+          <div class="search-dropdown" id="search-dropdown-desktop" role="dialog" aria-modal="true" aria-label="Search box" tabindex="-1">
+            <input type="search" id="search-input-desktop" class="search-input" placeholder="..." aria-label="Search exhibitions and artists" aria-autocomplete="list" aria-controls="search-results-desktop" aria-activedescendant="" />
+            <ul id="search-results-desktop" class="search-results" role="listbox" tabindex="-1"></ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="page-main" role="main" tabindex="-1" aria-label="Umělci">
+      <div class="text-background-blur">
+        <h1 data-lang="cs">Index umělců</h1>
+        <h1 data-lang="en" class="hidden-lang">Artists Directory</h1>
+
+        <section aria-label="Artists List">
+          <div data-lang="cs">
+            <p class="t-body" style="margin-bottom: 20px;">
+              Kompletní přehled autorů a umělců seřazených podle příjmení (včetně aktuálního programu 2026).
+            </p>
+
+            <!-- Alphabetical Jump Navigation -->
+            <nav class="year-nav" aria-label="Rychlá navigace podle abecedy">
+              <a class="year-pill" href="#letter-a">A</a>
+              <a class="year-pill" href="#letter-b">B</a>
+              <a class="year-pill" href="#letter-c">C</a>
+              <a class="year-pill" href="#letter-d">D</a>
+              <a class="year-pill" href="#letter-f">F</a>
+              <a class="year-pill" href="#letter-h">H</a>
+              <a class="year-pill" href="#letter-i">I</a>
+              <a class="year-pill" href="#letter-j">J</a>
+              <a class="year-pill" href="#letter-k">K</a>
+              <a class="year-pill" href="#letter-m">M</a>
+              <a class="year-pill" href="#letter-n">N</a>
+              <a class="year-pill" href="#letter-o">O</a>
+              <a class="year-pill" href="#letter-p">P</a>
+              <a class="year-pill" href="#letter-r">R</a>
+              <a class="year-pill" href="#letter-s">S</a>
+              <a class="year-pill" href="#letter-t">T</a>
+              <a class="year-pill" href="#letter-v">V</a>
+              <a class="year-pill" href="#letter-z">Z</a>
+            </nav>
+
+            <!-- A -->
+            <h3 id="letter-a" class="archive-year-heading">A</h3>
+            <div class="artist-grid">
+              <div class="artist-card"><h3 class="artist-card-name">Josef Achrer</h3><div class="artist-card-exhibitions">Zaostřeno na neurčito (2017)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Argišt Alaverdyan</h3><div class="artist-card-exhibitions">Metastázy obrazu (2017)</div></div>
+            </div>
+
+            <!-- B -->
+            <h3 id="letter-b" class="archive-year-heading">B</h3>
+            <div class="artist-grid">
+              <div class="artist-card"><h3 class="artist-card-name">Andrea Baštýřová</h3><div class="artist-card-exhibitions">Divní příbuzní (2022)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Marie Blabolilová</h3><div class="artist-card-exhibitions">Chůze lesem (2011)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Veronika Šrek Bromová</h3><div class="artist-card-exhibitions">Z jeskyně do jeskyně (2026)</div></div>
+            </div>
+
+            <!-- C -->
+            <h3 id="letter-c" class="archive-year-heading">C</h3>
+            <div class="artist-grid">
+              <div class="artist-card"><h3 class="artist-card-name">Michal Cimala</h3><div class="artist-card-exhibitions">Metastázy obrazu (2017)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Jonáš Czesaný</h3><div class="artist-card-exhibitions">Jehla v kupce sena (2015)</div></div>
+            </div>
+
+            <!-- D -->
+            <h3 id="letter-d" class="archive-year-heading">D</h3>
+            <div class="artist-grid">
+              <div class="artist-card"><h3 class="artist-card-name">Jan Daňhel</h3><div class="artist-card-exhibitions">Ň (2025)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Hugo Demartini</h3><div class="artist-card-exhibitions">Akce a proměna (2008)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Petr Dub</h3><div class="artist-card-exhibitions">Geometrův zlý sen (2012)</div></div>
+            </div>
+
+            <!-- F -->
+            <h3 id="letter-f" class="archive-year-heading">F</h3>
+            <div class="artist-grid">
+              <div class="artist-card"><h3 class="artist-card-name">Luděk Filipský</h3><div class="artist-card-exhibitions">Skryté energie (2014)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Marie Filippovová</h3><div class="artist-card-exhibitions">Suo Anno (2013)</div></div>
+            </div>
+
+            <!-- H -->
+            <h3 id="letter-h" class="archive-year-heading">H</h3>
+            <div class="artist-grid">
+              <div class="artist-card"><h3 class="artist-card-name">Dagmar Hochová</h3><div class="artist-card-exhibitions">Paměť všedního (2009)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Juraj Horváth</h3><div class="artist-card-exhibitions">Zázemí I (2024)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Zdenek Hůla</h3><div class="artist-card-exhibitions">K 70. narozeninám (2018)</div></div>
+            </div>
+
+            <!-- I -->
+            <h3 id="letter-i" class="archive-year-heading">I</h3>
+            <div class="artist-grid">
+              <div class="artist-card"><h3 class="artist-card-name">Monika Immrová</h3><div class="artist-card-exhibitions">Socha (2017)</div></div>
+            </div>
+
+            <!-- J -->
+            <h3 id="letter-j" class="archive-year-heading">J</h3>
+            <div class="artist-grid">
+              <div class="artist-card"><h3 class="artist-card-name">Jakub Janovský</h3><div class="artist-card-exhibitions">Kolotoč (2021)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Ellen Jilemnická</h3><div class="artist-card-exhibitions">Sochařská výstava (2017)</div></div>
+            </div>
+
+            <!-- K -->
+            <h3 id="letter-k" class="archive-year-heading">K</h3>
+            <div class="artist-grid">
+              <div class="artist-card"><h3 class="artist-card-name">Čestmír Kafka</h3><div class="artist-card-exhibitions">Krajiny možného konání (2008)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Olga Karlíková</h3><div class="artist-card-exhibitions">Prostor pro světlo (2010)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Mirek Kaufman</h3><div class="artist-card-exhibitions">in ExtreMis (2019)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Svatopluk Klimeš</h3><div class="artist-card-exhibitions">Oheň do papíru (2014)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Vladimír Kokolia</h3><div class="artist-card-exhibitions">No Problem (2013), KRÁSNO (2021)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Jiří Kolář</h3><div class="artist-card-exhibitions">Prostor mezi slovem a obrazem (2008)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Kateřina Komm</h3><div class="artist-card-exhibitions">Viteál (2021)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Richard Konvička</h3><div class="artist-card-exhibitions">Na ostrém bodu (2013)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Vladimír Kopecký</h3><div class="artist-card-exhibitions">Barvu užírám, hltám (2019)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Markéta Korečková</h3><div class="artist-card-exhibitions">Žena, srdce, prso, kost (2025)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Márius Kotrba</h3><div class="artist-card-exhibitions">Hledání rovnováhy (2009)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Tadeáš Kotrba</h3><div class="artist-card-exhibitions">Rinascimento (2022)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Anežka Kovalová</h3><div class="artist-card-exhibitions">Zastavení v čase (2016)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Jan Kovářík</h3><div class="artist-card-exhibitions">Statuofilia (2016)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Vojtěch Kovářík</h3><div class="artist-card-exhibitions">Touha po něčem trvalém (2025)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Jan Krtička</h3><div class="artist-card-exhibitions">Záznamy (2022)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Jánuš Kubíček</h3><div class="artist-card-exhibitions">Malba z let 1966-1986 (2013)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Alena Kučerová</h3><div class="artist-card-exhibitions">Postup (2015)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">František Kyncl</h3><div class="artist-card-exhibitions">Dialog sil (2014)</div></div>
+            </div>
+
+            <!-- M -->
+            <h3 id="letter-m" class="archive-year-heading">M</h3>
+            <div class="artist-grid">
+              <div class="artist-card"><h3 class="artist-card-name">Jiří Mědílek</h3><div class="artist-card-exhibitions">Pozorování (2019)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Jan Merta</h3><div class="artist-card-exhibitions">Liberec III (2011)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Jan Měřička</h3><div class="artist-card-exhibitions">...Vyhasla ohně kouř... (2022)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Luděk Míšek</h3><div class="artist-card-exhibitions">Hmota a prostor (2022)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Miloslav Moucha</h3><div class="artist-card-exhibitions">Od konceptu (2016)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Daisy Mrázková</h3><div class="artist-card-exhibitions">Voda a čára (2011)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Martin Mrkva</h3><div class="artist-card-exhibitions">MARTIN MRKVA (2026)</div></div>
+            </div>
+
+            <!-- N -->
+            <h3 id="letter-n" class="archive-year-heading">N</h3>
+            <div class="artist-grid">
+              <div class="artist-card"><h3 class="artist-card-name">Jaromíra Němcová</h3><div class="artist-card-exhibitions">START STOP (2018)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Vladimír Novák</h3><div class="artist-card-exhibitions">Za horizontem (2012)</div></div>
+            </div>
+
+            <!-- O -->
+            <h3 id="letter-o" class="archive-year-heading">O</h3>
+            <div class="artist-grid">
+              <div class="artist-card"><h3 class="artist-card-name">Karol Ondreička</h3><div class="artist-card-exhibitions">Ariadnina nit (2014)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Ivan Ouhel</h3><div class="artist-card-exhibitions">Proměny krajiny (2008)</div></div>
+            </div>
+
+            <!-- P -->
+            <h3 id="letter-p" class="archive-year-heading">P</h3>
+            <div class="artist-grid">
+              <div class="artist-card"><h3 class="artist-card-name">František Pacík</h3><div class="artist-card-exhibitions">Sochařská výstava (2011)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Alexandr Paul</h3><div class="artist-card-exhibitions">Fotograf (2012)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Patrik Pelikán</h3><div class="artist-card-exhibitions">Protostěna (2024)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">A. R. Penck</h3><div class="artist-card-exhibitions">Penck - Typlt (2015)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Milan Perič</h3><div class="artist-card-exhibitions">Watchers (2025)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Naděžda Plíšková</h3><div class="artist-card-exhibitions">Retrospektiva (2015)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Tomáš Polcar</h3><div class="artist-card-exhibitions">Krajiny (2016)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Jaroslav Prášil</h3><div class="artist-card-exhibitions">Jemná matérie (2018)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Míla Preslová</h3><div class="artist-card-exhibitions">Mezičas (2015)</div></div>
+            </div>
+
+            <!-- R -->
+            <h3 id="letter-r" class="archive-year-heading">R</h3>
+            <div class="artist-grid">
+              <div class="artist-card"><h3 class="artist-card-name">Václav Řezáč</h3><div class="artist-card-exhibitions">Znění (2026)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Tereza Říčanová</h3><div class="artist-card-exhibitions">Sny, květiny, ohně (2022)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Aleš Růžička</h3><div class="artist-card-exhibitions">Hortus (2018)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Jindřich Růžička</h3><div class="artist-card-exhibitions">Ten stůl však už... (2017)</div></div>
+            </div>
+
+            <!-- S -->
+            <h3 id="letter-s" class="archive-year-heading">S</h3>
+            <div class="artist-grid">
+              <div class="artist-card"><h3 class="artist-card-name">Jan Ságl</h3><div class="artist-card-exhibitions">Krajina (2010)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Zorka Ságlová</h3><div class="artist-card-exhibitions">Krajina (2010)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Magdalena Schmidtová</h3><div class="artist-card-exhibitions">Mraky (2024)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Zbyněk Sedlecký</h3><div class="artist-card-exhibitions">Tady a později (2015)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Lada Semecká</h3><div class="artist-card-exhibitions">Znění (2026)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Jaromír Šimkůj</h3><div class="artist-card-exhibitions">Z (trať) se! (2026)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Otakar Slavík</h3><div class="artist-card-exhibitions">Návraty (2009)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Pavel Šmíd</h3><div class="artist-card-exhibitions">Nečekaná setkání (2018)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Elsi Spitmann</h3><div class="artist-card-exhibitions">Dialog sil (2014)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Kateřina Štenclová</h3><div class="artist-card-exhibitions">Hranice mé řeči (2019)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Jiří Středa</h3><div class="artist-card-exhibitions">Odkryj svoji tvář (2020)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Jakub Stretti</h3><div class="artist-card-exhibitions">Aby zastavil se svět (2021)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Antonín Střížek</h3><div class="artist-card-exhibitions">Obrazy a kresby (2009)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Jiří Štourač</h3><div class="artist-card-exhibitions">Ticho, které mluví (2014)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Dagmar Šubrtová</h3><div class="artist-card-exhibitions">Ze světla do tmy (2023)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Jitka Svobodová</h3><div class="artist-card-exhibitions">Kouře a věci (2010)</div></div>
+            </div>
+
+            <!-- T -->
+            <h3 id="letter-t" class="archive-year-heading">T</h3>
+            <div class="artist-grid">
+              <div class="artist-card"><h3 class="artist-card-name">Margita Titlová Ylovsky</h3><div class="artist-card-exhibitions">Zasaď se do pole (2016)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Roman Trabura</h3><div class="artist-card-exhibitions">Malířská výstava (2017)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Lubomír Typlt</h3><div class="artist-card-exhibitions">Penck - Typlt (2015)</div></div>
+            </div>
+
+            <!-- V -->
+            <h3 id="letter-v" class="archive-year-heading">V</h3>
+            <div class="artist-grid">
+              <div class="artist-card"><h3 class="artist-card-name">Josefína Váchová</h3><div class="artist-card-exhibitions">Znění (2026)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Karel Valter</h3><div class="artist-card-exhibitions">Místo, krajina, obraz (2008)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Jitka Válová</h3><div class="artist-card-exhibitions">Setkání (2010)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Markéta Vaňková</h3><div class="artist-card-exhibitions">Z jeskyně do jeskyně (2026)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Ján Vasilko</h3><div class="artist-card-exhibitions">Mechanismy (2019)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Petr Veselý</h3><div class="artist-card-exhibitions">Dílem průřez (2009)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Rudolf Volráb</h3><div class="artist-card-exhibitions">Situace figury (2010)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Jiří Voves</h3><div class="artist-card-exhibitions">Samostatná výstava (2023)</div></div>
+            </div>
+
+            <!-- Z -->
+            <h3 id="letter-z" class="archive-year-heading">Z</h3>
+            <div class="artist-grid">
+              <div class="artist-card"><h3 class="artist-card-name">Josef Žáček</h3><div class="artist-card-exhibitions">Osamělost (2012)</div></div>
+              <div class="artist-card"><h3 class="artist-card-name">Jindřich Zeithamml</h3><div class="artist-card-exhibitions">Metafyzická plastika (2012)</div></div>
+            </div>
+
+          </div>
+
+          <div data-lang="en" class="hidden-lang">
+            <p class="t-body" style="margin-bottom: 24px;">
+              Complete index of creators and individual artists represented in exhibitions of the Exhibition Society TS (including the 2026 programme).
+            </p>
+            <div class="timeline" role="list">
+              <div class="t-year" role="listitem">A–Z Index</div>
+              <div class="t-body">Complete square grid index of featured individual artists sorted by surname.</div>
+            </div>
+          </div>
+        </section>
+
+        <div class="page-footer" role="contentinfo">
+          <div data-lang="cs">© Jilská 14</div>
+          <div data-lang="en" class="hidden-lang">© Jilska 14</div>
+          <a href="index.html" data-lang="cs">Zpět na úvod</a>
+          <a href="index.html" data-lang="en" class="hidden-lang">Back to home</a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <button id="back-to-top-btn" aria-label="Zpět nahoru / Scroll to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+  <script src="index.js"></script>
+</body>
+</html>

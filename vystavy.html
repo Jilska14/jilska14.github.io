@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <title>Výstavy — Jilská 14 / Výstavní společnost TS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap" rel="stylesheet" />
+
+  <link rel="icon" href="img/gj14.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="img/gj14.ico" type="image/x-icon" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Year jump navigation pills */
+    .year-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(0,0,0,0.15);
+    }
+    .year-pill {
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.3rem 0.6rem;
+      background: rgba(0,0,0,0.06);
+      color: #111;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .year-pill:hover {
+      background: #111;
+      color: #fff;
+    }
+    /* Grid-safe year heading that spans across both grid columns */
+    .archive-year-heading {
+      grid-column: 1 / -1;
+      font-size: 1.3rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 2px solid currentColor;
+      padding-bottom: 6px;
+      color: #111;
+    }
+
+    /* Stacked numeric date formatting & archive spacing */
+    [aria-label="Výstavy"] .timeline {
+      grid-template-columns: 110px 1fr !important;
+      gap: 24px 30px !important;
+    }
+    .stacked-date {
+      line-height: 1.35;
+      font-size: 0.9rem;
+    }
+    .stacked-date .date-divider {
+      opacity: 0.4;
+      font-size: 0.8em;
+      margin: 2px 0;
+      display: block;
+    }
+
+    /* Exhibition entry typography hierarchy */
+    .ex-title {
+      font-size: 1.8em;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 0.25rem;
+      letter-spacing: 0.05em;
+    }
+    .ex-author {
+      font-size: 1.1em;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    .ex-curator {
+      font-size: 0.95em;
+      opacity: 0.85;
+      margin-bottom: 0.5rem;
+    }
+    .ex-blurb {
+      font-size: 0.95em;
+      line-height: 1.6;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Přeskočit na obsah / Skip to content</a>
+
+  <button id="hamburger-btn"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          class="hamburger-btn"
+          aria-haspopup="true">
+    <span></span><span></span><span></span>
+  </button>
+
+  <div class="logo" aria-label="Jilska Logo">
+    <a href="index.html" aria-label="Zpět na úvod / Back to home">
+      <img src="img/logo-jilska.png" alt="Jilská 14" />
+    </a>
+  </div>
+
+  <div class="page-wrap">
+    <header>
+      <nav id="primary-navigation" role="navigation" aria-label="Primary navigation" class="nav-menu">
+        <ul>
+          <li><a href="index.html#" data-lang="cs">Informace pro návštěvníky</a><a href="index.html#" data-lang="en" class="hidden-lang">Information for Visitors</a></li>
+          <li><a href="vystavy.html" data-lang="cs" aria-current="page">Výstavy</a><a href="vystavy.html" data-lang="en" class="hidden-lang" aria-current="page">Exhibitions</a></li>
+          <li><a href="index.html#" data-lang="cs">Doprovodné programy</a><a href="index.html#" data-lang="en" class="hidden-lang">Additional Programs</a></li>
+          <li><a href="index.html#" data-lang="cs">Umělci</a><a href="index.html#" data-lang="en" class="hidden-lang">Artists</a></li>
+          <li><a href="vystavni_spolecnost_ts.html" data-lang="cs">Výstavní společnost TS</a><a href="vystavni_spolecnost_ts.html" data-lang="en" class="hidden-lang">Exhibition Society TS</a></li>
+          <li><a href="index.html#" data-lang="cs">Kontakty</a><a href="index.html#" data-lang="en" class="hidden-lang">Contacts</a></li>
+        </ul>
+      </nav>
+
+      <div class="lang-search-container">
+        <button id="lang-toggle-desktop" aria-label="Přepnout jazyk / Switch language">
+          <span class="dot" aria-hidden="true"></span>
+          <span id="lang-label-desktop">EN</span>
+        </button>
+
+        <div class="search-container-desktop" style="position: relative;">
+          <button id="search-icon-btn-desktop" aria-label="Open search" aria-haspopup="listbox" aria-expanded="false" aria-controls="search-dropdown-desktop">
+            <svg viewBox="0 0 45 45" aria-hidden="true" focusable="false" width="18" height="18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M43.462,35.997l-11.401-11.37c1.197-2.352,1.845-4.962,1.845-7.676c0-4.528-1.765-8.785-4.966-11.986C25.739,1.763,21.481,0,16.953,0C12.426,0,8.167,1.763,4.966,4.965C1.765,8.167,0,12.424,0,16.952
+       c0,4.528,1.764,8.785,4.966,11.986c3.201,3.202,7.459,4.965,11.986,4.965c2.714,0,5.325-0.646,7.675-1.842l11.371,11.402
+       c1.029,1.029,2.382,1.546,3.732,1.546c1.35,0,2.701-0.517,3.731-1.546C45.524,41.4,45.524,38.059,43.462,35.997z 
+       M9.444,24.459c-2.005-2.006-3.109-4.671-3.109-7.507s1.104-5.502,3.11-7.508c2.005-2.005,4.671-3.11,7.507-3.11s5.502,1.104,7.508,3.11
+       c2.005,2.005,3.11,4.671,3.11,7.507s-1.105,5.502-3.11,7.508c-2.006,2.005-4.673,3.109-7.508,3.109
+       C14.117,27.568,11.451,26.465,9.444,24.459z"/>
+            </svg>
+          </button>
+
+          <div class="search-dropdown" id="search-dropdown-desktop" role="dialog" aria-modal="true" aria-label="Search box" tabindex="-1">
+            <input type="search" id="search-input-desktop" class="search-input" placeholder="..." aria-label="Search exhibitions and artists" aria-autocomplete="list" aria-controls="search-results-desktop" aria-activedescendant="" />
+            <ul id="search-results-desktop" class="search-results" role="listbox" tabindex="-1"></ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="page-main" role="main" tabindex="-1" aria-label="Výstavy">
+      <div class="text-background-blur">
+        <h1 data-lang="cs">Archiv výstav</h1>
+        <h1 data-lang="en" class="hidden-lang">Exhibition Archive</h1>
+
+        <section aria-label="Exhibitions List">
+          <div data-lang="cs">
+            <p class="t-body" style="margin-bottom: 16px;">
+              Kompletní archiv všech 117 výstav Výstavní společnosti TS (Topičův salon / Galerie Jilská 14).
+            </p>
+
+            <!-- Quick Jump Year Navigation -->
+            <nav class="year-nav" aria-label="Rychlá navigace podle roků">
+              <a class="year-pill" href="#y-2026">2026</a>
+              <a class="year-pill" href="#y-2025">2025</a>
+              <a class="year-pill" href="#y-2024">2024</a>
+              <a class="year-pill" href="#y-2023">2023</a>
+              <a class="year-pill" href="#y-2022">2022</a>
+              <a class="year-pill" href="#y-2021">2021</a>
+              <a class="year-pill" href="#y-2020">2020</a>
+              <a class="year-pill" href="#y-2019">2019</a>
+              <a class="year-pill" href="#y-2018">2018</a>
+              <a class="year-pill" href="#y-2017">2017</a>
+              <a class="year-pill" href="#y-2016">2016</a>
+              <a class="year-pill" href="#y-2015">2015</a>
+              <a class="year-pill" href="#y-2014">2014</a>
+              <a class="year-pill" href="#y-2013">2013</a>
+              <a class="year-pill" href="#y-2012">2012</a>
+              <a class="year-pill" href="#y-2011">2011</a>
+              <a class="year-pill" href="#y-2010">2010</a>
+              <a class="year-pill" href="#y-2009">2009</a>
+              <a class="year-pill" href="#y-2008">2008</a>
+            </nav>
+
+            <div class="timeline" role="list">
+              <!-- 2026 -->
+              <h3 id="y-2026" class="archive-year-heading">2026</h3>
+              <div class="t-year" role="listitem"><div class="stacked-date">3. 12. 2026<span class="date-divider">—</span>20. 2. 2027</div></div>
+              <div class="t-body">
+				<div class="ex-title">Znění</div>
+                <div class="ex-author">Václav Řezáč, Lada Semecká, Josefína Váchová</div>
+                <div class="ex-curator">Kurátor/ka: Romana Skálová</div>
+                <div class="ex-blurb">Výstava komponuje díla tří výrazných sklářů do jednoho výstavního celku v neklidném rubatu. Díla Lady Semecké jsou jako ona sama, křehké a subtilní, vrstvené a inspirativní.</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">17. 9. 2026<span class="date-divider">—</span>14. 11. 2026</div></div>
+              <div class="t-body"><a href="martin_mrkva.html">
+                <div class="ex-title">MARTIN MRKVA</div>
+				<div class="ex-author">Martin Mrkva</div>
+                <div class="ex-curator">Kurátor/ka: Lucie B. Šiklová</div>
+                <div class="ex-blurb">Již působivá nezapomenutelná diplomová práce Martina Mrkvy v roce 2017, kdy vytvořil jakési scénické dioráma znázorňující bitvu rohlíků a housek, jej představuje jako umělce bez kompromisu.</a></div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">25. 6. 2026<span class="date-divider">—</span>29. 8. 2026</div></div>
+              <div class="t-body">
+				<div class="ex-title">Z (trať) se!</div>
+                <div class="ex-author">Jaromír Šimkůj</div>
+                <div class="ex-curator">Kurátor/ka: Terezie Zemánková</div>
+                <div class="ex-blurb">Výstava Jaromíra Šimkůj v prostorách galerie Jilská 14 bude mít charakter průřezové přehlídky autora. Pro spletité prostory galerie, ve kterých je každá z místností zcela odlišná, vybere kurátorka výstavy díla různého charakteru objeví se trojrozměrné objekty, reliéfy i práce na papíře.</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">6. 5. 2026<span class="date-divider">—</span>13. 6. 2026</div></div>
+              <div class="t-body">
+                <div class="ex-title">CRASHTEST 15: FLUX</div>
+                <div class="ex-author">Skupinová výstava</div>
+                <div class="ex-curator">Kurátor/ka: Sára Aseemová, Barbora Kabešová, Melissa Korjenićová, Vilém Neškera, Irina Romanov, Dayana Talkenova</div>
+                <div class="ex-blurb">Výstava vznikne v rámci kurátorského projektu CRASH TEST, který je od roku 2010 platformou pro spolupráci studentů dějin umění ÚDKU KTF UK se studenty vysokých škol v České republice a zahraničí.</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">12. 3. 2026<span class="date-divider">—</span>25. 4. 2026</div></div>
+              <div class="t-body">
+                <div class="ex-title">Z jeskyně do jeskyně</div>
+                <div class="ex-author">Veronika Šrek Bromová, Markéta Vaňková</div>
+                <div class="ex-curator">Kurátor/ka: Petr Vaňous</div>
+                <div class="ex-blurb">Výstava pro prostory galerie Jilská 14 bude kombinací / koláží tradiční galerijní prezentace a tvorby prostředí napříč různými výrazovými médii. Bude to hra s konstelacemi a jejich výpověďmi.</div>
+              </div>
+
+              <!-- 2025 -->
+              <h3 id="y-2025" class="archive-year-heading">2025</h3>
+              <div class="t-year" role="listitem"><div class="stacked-date">3. 12. 2025<span class="date-divider">—</span>21. 2. 2026</div></div>
+              <div class="t-body">
+                <div class="ex-title">Žena, srdce, prso, kost</div>
+                <div class="ex-author">Markéta Korečková</div>
+                <div class="ex-curator">Kurátor/ka: Iva Mladičová</div>
+                <div class="ex-blurb">Autorka pracuje s humorem, nadsázkou i osobní zkušeností a v instalaci propojuje motivy těla, rodinné paměti a hlubších vrstev ženské zkušenosti.</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">17. 11. 2025<span class="date-divider">—</span>22. 11. 2025</div></div>
+              <div class="t-body">
+                <div class="ex-title">talkPOPc</div>
+                <div class="ex-author">Dena Shottenkirk</div>
+                <div class="ex-curator">Kurátor/ka: Dena Shottenkirk</div>
+                <div class="ex-blurb">Dena Shottenkirk's talkPOPc (Philosophers' Ontological Party club) s Dr. Martinem Nitschem, vedoucím Katedry současné kontinentální filozofie na Filozofickém ústavu Akademie věd ČR.</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">10. 9. 2025<span class="date-divider">—</span>15. 11. 2025</div></div>
+              <div class="t-body">
+                <div class="ex-title">Touha po něčem trvalém</div>
+                <div class="ex-author">Vojtěch Kovářík</div>
+                <div class="ex-curator">Kurátor/ka: Eva Bendová</div>
+                <div class="ex-blurb">Výstava představuje aktuální tvorbu grafika Vojtěcha Kováříka. Autor rozvíjí svou mytologii každodennosti prostřednictvím soustředěného pohledu na objekty obývacího prostoru, především židle a stoly.</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">25. 6. 2025<span class="date-divider">—</span>30. 8. 2025</div></div>
+              <div class="t-body">
+                <div class="ex-title">Ň</div>
+                <div class="ex-author">Jan Daňhel, Pavel Tichoň</div>
+                <div class="ex-curator">Kurátor/ka: Petr Vaňous</div>
+                <div class="ex-blurb">Výstavní projekt Ň refrešuje jak přednastavené, vynuděné pasivní vnímání a iniciuje vlastní vklad do řešení vizuálních jinotajů.</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">7. 5. 2025<span class="date-divider">—</span>14. 6. 2025</div></div>
+              <div class="t-body">
+                <div class="ex-title">CRASHTEST 14: Slowing down</div>
+                <div class="ex-author">Nina Behnisch, Jan Burian, Gila Epshtein, Emma Heckel, Barnabas Jacob Herrmann, Maximiliane Kade, Adam Kopecký, Mahsa Parvizi, Christopher Schröder, Zuzana Sochorová, Filip Trubač, Kea Uhlig, Daniela Večerková</div>
+                <div class="ex-curator">Kurátor/ka: Jana Hejdová, Melissa Rothe, Isabell Stickler, Aneta Vacková</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">5. 3. 2025<span class="date-divider">—</span>26. 4. 2025</div></div>
+              <div class="t-body">
+                <div class="ex-title">Watchers</div>
+                <div class="ex-author">Milan Perič</div>
+                <div class="ex-curator">Kurátor/ka: Lucie B. Šiklová</div>
+                <div class="ex-blurb">Výstava v Jilské, kdy zastřešujícím tématem roku je Zpomalení, se soustředí především na tvorbu posledních pěti let.</div>
+              </div>
+
+              <!-- 2024 -->
+              <h3 id="y-2024" class="archive-year-heading">2024</h3>
+              <div class="t-year" role="listitem"><div class="stacked-date">11. 12. 2024<span class="date-divider">—</span>22. 2. 2025</div></div>
+              <div class="t-body">
+                <div class="ex-title">Zázemí I</div>
+                <div class="ex-author">Juraj Horváth</div>
+                <div class="ex-curator">Kurátor/ka: Jan Čumlivski</div>
+                <div class="ex-blurb">Výstava Juraje Horvátha se sice bude konat v roce tzv. významného životního jubilea, neměla by ale být strukturovaná oslavně.</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">17. 9. 2024<span class="date-divider">—</span>9. 11. 2024</div></div>
+              <div class="t-body">
+                <div class="ex-title">Protostěna</div>
+                <div class="ex-author">Patrik Pelikán</div>
+                <div class="ex-curator">Kurátor/ka: Iva Madičová</div>
+                <div class="ex-blurb">Práce Patrika Pelikána mají vesměs charakter dialogické intervence. Reagují na dané prostředí.</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">26. 6. 2024<span class="date-divider">—</span>24. 8. 2024</div></div>
+              <div class="t-body">
+                <div class="ex-title">Mraky</div>
+                <div class="ex-author">Magdalena Schmidtová</div>
+                <div class="ex-curator">Kurátor/ka: Lucie B. Šiklová</div>
+                <div class="ex-blurb">Když se řekne mrak, podvědomě se nám nejspíš zachmuří čelo.</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">10. 5. 2024<span class="date-divider">—</span>15. 6. 2024</div></div>
+              <div class="t-body">
+                <div class="ex-title">CRASHTEST 13: Reality check</div>
+                <div class="ex-author">Anna Gottwaldová, Michaela Jamborová, Veronika Lehečková, Adéla Mitová, Nela Neubauerová, Vojtěch Nosek, Kateryna Orunbaieva, Vavřinec Vyoral, Lenka Zadražilová</div>
+                <div class="ex-curator">Kurátor/ka: Jana Hejdová, Agáta Kudláková, Eliška Ševcová, Aneta Vacková, Aneta Vašáková, Kristina Zakhovailo</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">6. 3. 2024<span class="date-divider">—</span>27. 4. 2024</div></div>
+              <div class="t-body">
+                <div class="ex-title">Depozit paměti</div>
+                <div class="ex-author">Miloš Šejn</div>
+                <div class="ex-curator">Kurátor/ka: Petr Vaňous</div>
+                <div class="ex-blurb">Autorská instalace propojující přírodní procesy, performativní záznamy a skicu.</div>
+              </div>
+
+              <!-- 2023 -->
+              <h3 id="y-2023" class="archive-year-heading">2023</h3>
+              <div class="t-year" role="listitem"><div class="stacked-date">7. 12. 2023<span class="date-divider">—</span>24. 2. 2024</div></div>
+              <div class="t-body">
+                <div class="ex-title">JÁ-MY</div>
+                <div class="ex-author">Pavla Aubrechtová, Jana Budíková, Veronika Durová, Marie Filippovová, Vladimír Gebauer, Patrik Hábl, Jiří Kačer, Svatopluk Klimeš, Vladimír Kopecký, Svatopluk Klimeš, Vladimír Kovařík, Alena Kučerová, Miloslav Moucha, Miloslav Polcar, Aleš Růžička, Helena Samohelová, Kristina Vašíčková, Vladimír Véla, Jindřich Zeithamml</div>
+                <div class="ex-curator">Kurátor/ka: Anna Kučerová, Kateřina Turková, Svatopluk Klimeš</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">13. 9. 2023<span class="date-divider">—</span>11. 11. 2023</div></div>
+              <div class="t-body">
+                <div class="ex-title">Ze světla do tmy, ze tmy do světla</div>
+                <div class="ex-author">Dagmar Šubrtová</div>
+                <div class="ex-curator">Kurátor/ka: Iva Mladičová</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">28. 6. 2023<span class="date-divider">—</span>26. 8. 2023</div></div>
+              <div class="t-body">
+                <div class="ex-title">Jiří Voves</div>
+                <div class="ex-author">Jiří Voves</div>
+                <div class="ex-curator">Kurátor/ka: Lucie Šiklová</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">19. 5. 2023<span class="date-divider">—</span>17. 6. 2023</div></div>
+              <div class="t-body">
+                <div class="ex-title">CRASHTEST 12</div>
+                <div class="ex-author">Marvin Dieterich, Noemi Durighello, Babsi Daisenberger, Cosima Geiser, Daniela Aurora Echevarria, Robin Goldbach, Lea Hoffbauer, Hanne Jannasch, Yimei Liu, Anna Lorenzana, Franziska Rist, Tima Sauer, Christian Seemann</div>
+                <div class="ex-curator">Kurátor/ka: Karolína Fifernová, Sofya Komarova</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">15. 3. 2023<span class="date-divider">—</span>6. 5. 2023</div></div>
+              <div class="t-body">
+                <div class="ex-title">Trip</div>
+                <div class="ex-author">Dávid Čerťanský, Petr Gruber, Filip Horyna, Tomáš Skála, Gabriela Slaninková</div>
+                <div class="ex-curator">Kurátor/ka: Petr Vaňous</div>
+              </div>
+
+              <!-- 2022 -->
+              <h3 id="y-2022" class="archive-year-heading">2022</h3>
+              <div class="t-year" role="listitem"><div class="stacked-date">9. 12. 2022<span class="date-divider">—</span>11. 2. 2023</div></div>
+              <div class="t-body">
+                <div class="ex-title">Sny, květiny, ohně a kameny</div>
+                <div class="ex-author">Tereza Říčanová</div>
+                <div class="ex-curator">Kurátor/ka: Lucie Šiklová</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">7. 10. 2022<span class="date-divider">—</span>26. 11. 2022</div></div>
+              <div class="t-body">
+                <div class="ex-title">Záznamy</div>
+                <div class="ex-author">Jan Krtička</div>
+                <div class="ex-curator">Kurátor/ka: Adéla Machová</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">5. 8. 2022<span class="date-divider">—</span>24. 9. 2022</div></div>
+              <div class="t-body">
+                <div class="ex-title">Rinascimento</div>
+                <div class="ex-author">Tadeáš Kotrba</div>
+                <div class="ex-curator">Kurátor/ka: Emma Hanzlíková</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">20. 5. 2022<span class="date-divider">—</span>16. 7. 2022</div></div>
+              <div class="t-body">
+                <div class="ex-title">Divní příbuzní</div>
+                <div class="ex-author">Andrea Baštýřová</div>
+                <div class="ex-curator">Kurátor/ka: Petr Vaňous</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">24. 3. 2022<span class="date-divider">—</span>13. 5. 2022</div></div>
+              <div class="t-body">
+                <div class="ex-title">Hmota a prostor</div>
+                <div class="ex-author">Luděk Míšek</div>
+                <div class="ex-curator">Kurátor/ka: Iva Mladičová</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">13. 1. 2022<span class="date-divider">—</span>26. 2. 2022</div></div>
+              <div class="t-body">
+                <div class="ex-title">...Vyhasla ohně kouř...</div>
+                <div class="ex-author">Jan Měřička</div>
+                <div class="ex-curator">Kurátor/ka: Eva Bendová</div>
+              </div>
+
+              <!-- 2021 -->
+              <h3 id="y-2021" class="archive-year-heading">2021</h3>
+              <div class="t-year" role="listitem"><div class="stacked-date">10. 11. 2021<span class="date-divider">—</span>31. 12. 2021</div></div>
+              <div class="t-body">
+                <div class="ex-title">KRÁSNO: Svědci Kokoliovi</div>
+                <div class="ex-author">Vladimír Kokolia, Eva Červená</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">15. 9. 2021<span class="date-divider">—</span>30. 10. 2021</div></div>
+              <div class="t-body">
+                <div class="ex-title">Kolotoč</div>
+                <div class="ex-author">Jakub Janovský</div>
+                <div class="ex-curator">Kurátor/ka: Petr Vaňous</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">21. 7. 2021<span class="date-divider">—</span>4. 9. 2021</div></div>
+              <div class="t-body">
+                <div class="ex-title">Aby zastavil se svět</div>
+                <div class="ex-author">Jakub Stretti, Josefína Dušková (host)</div>
+                <div class="ex-curator">Kurátor/ka: Lucie Šiklová</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">26. 5. 2021<span class="date-divider">—</span>10. 7. 2021</div></div>
+              <div class="t-body">
+                <div class="ex-title">Viteál</div>
+                <div class="ex-author">Kateřina Komm</div>
+                <div class="ex-curator">Kurátor/ka: Iva Mladičová</div>
+              </div>
+
+              <!-- 2020 -->
+              <h3 id="y-2020" class="archive-year-heading">2020</h3>
+              <div class="t-year" role="listitem"><div class="stacked-date">2. 9. 2020<span class="date-divider">—</span>1. 10. 2020</div></div>
+              <div class="t-body">
+                <div class="ex-title">pOSTKONCEpTUÁLNÍ ANTIKONCEpCE</div>
+                <div class="ex-author">Kateřina Adamová, Michaela Maupicová, Dana Sahánková</div>
+                <div class="ex-curator">Kurátor/ka: Petr Vaňous</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">7. 8. 2020<span class="date-divider">—</span>18. 9. 2020</div></div>
+              <div class="t-body">
+                <div class="ex-title">V kůži Robinsona</div>
+                <div class="ex-author">Zdena Kolečková</div>
+                <div class="ex-curator">Kurátor/ka: Anna Vartecká</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">2. 7. 2020<span class="date-divider">—</span>31. 7. 2020</div></div>
+              <div class="t-body">
+                <div class="ex-title">Zrcadlo (it all comes back to you)</div>
+                <div class="ex-author">KW + Q</div>
+                <div class="ex-curator">Kurátor/ka: Petr Vaňous</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">12. 5. 2020<span class="date-divider">—</span>5. 6. 2020</div></div>
+              <div class="t-body">
+                <div class="ex-title">Odkryj svoji tvář</div>
+                <div class="ex-author">Jiří Středa</div>
+                <div class="ex-curator">Kurátor/ka: Blanka Jiráčková</div>
+              </div>
+
+              <!-- 2019 -->
+              <h3 id="y-2019" class="archive-year-heading">2019</h3>
+              <div class="t-year" role="listitem"><div class="stacked-date">13. 12. 2019<span class="date-divider">—</span>31. 1. 2020</div></div>
+              <div class="t-body">
+                <div class="ex-title">Pozorování</div>
+                <div class="ex-author">Jiří Mědílek</div>
+                <div class="ex-curator">Kurátor/ka: Petr Vaňous</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">25. 10. 2019<span class="date-divider">—</span>29. 11. 2019</div></div>
+              <div class="t-body">
+                <div class="ex-title">Barvu užírám, hltám</div>
+                <div class="ex-author">Vladimír Kopecký</div>
+                <div class="ex-curator">Kurátor/ka: Anna Kučerová</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">23. 8. 2019<span class="date-divider">—</span>27. 9. 2019</div></div>
+              <div class="t-body">
+                <div class="ex-title">in ExtreMis</div>
+                <div class="ex-author">Mirek Kaufman</div>
+                <div class="ex-curator">Kurátor/ka: Lucie Šiklová</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">10. 7. 2019<span class="date-divider">—</span>16. 8. 2019</div></div>
+              <div class="t-body">
+                <div class="ex-title">Mechanismy v mechanismech</div>
+                <div class="ex-author">Ján Vasilko</div>
+                <div class="ex-curator">Kurátor/ka: Petr Vaňous</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">14. 6. 2019<span class="date-divider">—</span>4. 7. 2019</div></div>
+              <div class="t-body">
+                <div class="ex-title">CRASHTEST 9: VĚCI</div>
+                <div class="ex-author">Adéla Bytelová, Eliška Ctiborová, Klára Frídlová, Vilém Kubáč, Kristina Pourová, Barbora Růzhová</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">4. 4. 2019<span class="date-divider">—</span>3. 5. 2019</div></div>
+              <div class="t-body">
+                <div class="ex-title">Hranice mé řeči</div>
+                <div class="ex-author">Kateřina Štenclová</div>
+                <div class="ex-curator">Kurátor/ka: Tomáš Pospiszyl</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">1. 3. 2019<span class="date-divider">—</span>29. 3. 2019</div></div>
+              <div class="t-body">
+                <div class="ex-title">Doma</div>
+                <div class="ex-author">Petr Stibral</div>
+                <div class="ex-curator">Kurátor/ka: Iva Mladičová</div>
+              </div>
+
+              <!-- 2018 -->
+              <h3 id="y-2018" class="archive-year-heading">2018</h3>
+              <div class="t-year" role="listitem"><div class="stacked-date">18. 12. 2018<span class="date-divider">—</span>25. 1. 2019</div></div>
+              <div class="t-body">
+                <div class="ex-title">Jemná matérie</div>
+                <div class="ex-author">Jaroslav Prášil</div>
+                <div class="ex-curator">Kurátor/ka: Adéla Machová</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">24. 10. 2018<span class="date-divider">—</span>7. 12. 2018</div></div>
+              <div class="t-body">
+                <div class="ex-title">Nečekaná setkání</div>
+                <div class="ex-author">Pavel Šmíd</div>
+                <div class="ex-curator">Kurátor/ka: Petr Vaňous</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">4. 9. 2018<span class="date-divider">—</span>3. 10. 2018</div></div>
+              <div class="t-body">
+                <div class="ex-title">START STOP</div>
+                <div class="ex-author">Jaromíra Němcová</div>
+                <div class="ex-curator">Kurátor/ka: Marie Birchler Suchánková</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">20. 7. 2018<span class="date-divider">—</span>24. 8. 2018</div></div>
+              <div class="t-body">
+                <div class="ex-title">Nový černý romantismus</div>
+                <div class="ex-author">Skupinová výstava</div>
+                <div class="ex-curator">Kurátor/ka: Christoph Tannert</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">14. 6. 2018<span class="date-divider">—</span>4. 7. 2018</div></div>
+              <div class="t-body">
+                <div class="ex-title">CRASHTEST 8: UMPRUMEM 92/93</div>
+                <div class="ex-author">Martin Balcar, Michal Bauer, Martin Brčák, Veronika Bromová, Tomáš Coufal, Simona Černá, Ivan Dlabač, Milada Fischerová, Markéta Glover roz. Menšová, Alex Guerrero, Evžen Hanzalík, Filip Heyduk, Helena Hlušičková roz. Fingerová, Václav Hofmeister, Klára Horová roz. Kolářová, Roman Hudziec, Ondřej Chorý, Martin Kloda, Jiří Kočí, Oto Macek, Pavla Mejsnarová, Michal Mikula, Martina Mináriková, Václav Novák, Jolana Nováková roz. Krédlová, Petra Nováková Ondreičková, Tomáš Oslizlok, Markéta Othová, Lucie Rýdlová, Dominika Sládková roz. Paštéková, Pavel Šustr, Jana Švédová roz. Sepešiová, Andrea Tomanová roz. Borovská, Yvonne Váchová roz. Maneová, Eva Vlčková roz. Cvrčková, Petr Vogel</div>
+                <div class="ex-curator">Kurátor/ka: Markéta Hornerová, Lenka Chýlová, Marie Pučerová, Dita Schulmeisterová, Lucie Straková, Tatiana Tiagusheva, Klára Vetterová</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">12. 6. 2018<span class="date-divider">—</span>13. 7. 2018</div></div>
+              <div class="t-body">
+                <div class="ex-title">Hortus</div>
+                <div class="ex-author">Aleš Růžička</div>
+                <div class="ex-curator">Kurátor/ka: Lucie Šiklová</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">6. 2. 2018<span class="date-divider">—</span>7. 3. 2018</div></div>
+              <div class="t-body">
+                <div class="ex-title">Zdenek Hůla</div>
+                <div class="ex-author">Zdenek Hůla</div>
+                <div class="ex-curator">Kurátor/ka: Magdalena Juříková</div>
+              </div>
+
+              <!-- 2017 -->
+              <h3 id="y-2017" class="archive-year-heading">2017</h3>
+              <div class="t-year" role="listitem"><div class="stacked-date">13. 12. 2017<span class="date-divider">—</span>26. 1. 2018</div></div>
+              <div class="t-body">
+                <div class="ex-title">Zaostřeno na neurčito</div>
+                <div class="ex-author">Josef Achrer, Jana Bernartová, Daniel Hanzlík, Václav Kopecký, Václav Krůček, Jiří Lindovský, Richard Loskot, Lukáš Machalický, MArtina Machová, Jiří Matějů, Jaromír Novotný, Patrik Pelikán, Jan Poupě, Jaroslav Prokeš, Jitka Svobodová, Jan Šerých</div>
+                <div class="ex-curator">Kurátor/ka: Karel Srp</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">11. 10. 2017<span class="date-divider">—</span>10. 11. 2017</div></div>
+              <div class="t-body">
+                <div class="ex-title">Metastázy obrazu</div>
+                <div class="ex-author">Argišt Alaverdyan, Michal Cimala, Silvia Krivošíková, David Pešat, Jakub Sýkora, Jiří Šigut</div>
+                <div class="ex-curator">Kurátor/ka: Petr Vaňous</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">24. 8. 2017<span class="date-divider">—</span>21. 9. 2017</div></div>
+              <div class="t-body">
+                <div class="ex-title">Ellen Jilemnická</div>
+                <div class="ex-author">Ellen Jilemnická</div>
+                <div class="ex-curator">Kurátor/ka: Petr Wittlich</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">12. 7. 2017<span class="date-divider">—</span>17. 8. 2017</div></div>
+              <div class="t-body">
+                <div class="ex-title">Roman Trabura</div>
+                <div class="ex-author">Roman Trabura</div>
+                <div class="ex-curator">Kurátor/ka: Lucie Šiklová</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">13. 6. 2017<span class="date-divider">—</span>7. 7. 2017</div></div>
+              <div class="t-body">
+                <div class="ex-title">CRASHTEST 7: Rekonstrukce AVU 93/94</div>
+                <div class="ex-author">Karel Bartáček, Petr Budek, Quan Do Manh, Milena Dopitová, Pavel Doskočil, Michal Fiala, René Hábl, Vladimír Hanuš, Petr Horáček, Irena Jůzová, Cyril Kozák, Miroslav Krawczuk, Jiří Lhota, Marek Ludmila, Lubomíra Kmeťová, Jiří Matějů, Anna Neborová, Miroslav Pánek, Petr Písařík, Tomáš Rygl, Nikolaj Stanev, Jakub Stretti, Anna Svobodová, Martin Šimek, Petr Štojdl, Petr Trávníček, Daniel Trubač, Kateřina Vincourová</div>
+                <div class="ex-curator">Kurátor/ka: Lenka Chýlová, Lujza Kotočová, Magdalena Nerudová, Dita Schulmeistrová, Klára Vetterová, Alena Vocelková</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">4. 4. 2017<span class="date-divider">—</span>17. 5. 2017</div></div>
+              <div class="t-body">
+                <div class="ex-title">Ten stůl však už tam nestojí...</div>
+                <div class="ex-author">Jindřich Růžička</div>
+                <div class="ex-curator">Kurátor/ka: Hana Larvová</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">7. 2. 2017<span class="date-divider">—</span>3. 3. 2017</div></div>
+              <div class="t-body">
+                <div class="ex-title">Socha</div>
+                <div class="ex-author">Monika Immrová</div>
+                <div class="ex-curator">Kurátor/ka: Iva Mladičová</div>
+              </div>
+
+              <!-- 2016 -->
+              <h3 id="y-2016" class="archive-year-heading">2016</h3>
+              <div class="t-year" role="listitem"><div class="stacked-date">13. 12. 2016<span class="date-divider">—</span>27. 1. 2017</div></div>
+              <div class="t-body">
+                <div class="ex-title">Od konceptu</div>
+                <div class="ex-author">Miloslav Moucha</div>
+                <div class="ex-curator">Kurátor/ka: Lucie Šiklová</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">16. 9. 2016<span class="date-divider">—</span>14. 10. 2016</div></div>
+              <div class="t-body">
+                <div class="ex-title">Zasaď se do pole</div>
+                <div class="ex-author">Margita Titlová Ylovsky</div>
+                <div class="ex-curator">Kurátor/ka: Marianna Placáková</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">23. 8. 2016<span class="date-divider">—</span>23. 9. 2016</div></div>
+              <div class="t-body">
+                <div class="ex-title">Zastavení v čase</div>
+                <div class="ex-author">Anežka Kovalová</div>
+                <div class="ex-curator">Kurátor/ka: Miroslava Hlaváčková</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">12. 7. 2016<span class="date-divider">—</span>12. 8. 2016</div></div>
+              <div class="t-body">
+                <div class="ex-title">Krajiny</div>
+                <div class="ex-author">Tomáš Polcar</div>
+                <div class="ex-curator">Kurátor/ka: Lucie Šiklová</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">17. 6. 2016<span class="date-divider">—</span>1. 7. 2016</div></div>
+              <div class="t-body">
+                <div class="ex-title">CRASHTEST 6: Toužíš po mně</div>
+                <div class="ex-author">Nikol Čížek Uxová, Tereza Froncová, Zuzana Kleinerová, Vendula Kolářová, Markéta Kosinová, Zuzana Krausová, Filip Martínek, Elena Pecenová, Tereza Polatová, Nela Richterová, Sandra Svobodová, Petr Urválek, Adéla Venturová, Tereza Vinklárková ad.</div>
+                <div class="ex-curator">Kurátor/ka: Markéta Hornerová, Kristýna Kramlová, Magdalena Nerudová, Dita Schulmeisterová, Lenka Škvorová, Michal Turbák</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">30. 3. 2016<span class="date-divider">—</span>13. 5. 2016</div></div>
+              <div class="t-body">
+                <div class="ex-title">Statuofilia</div>
+                <div class="ex-author">Jan Kovářík</div>
+                <div class="ex-curator">Kurátor/ka: Lucie Šiklová</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">5. 2. 2016<span class="date-divider">—</span>3. 3. 2016</div></div>
+              <div class="t-body">
+                <div class="ex-title">Materiálový experiment</div>
+                <div class="ex-author">Anna Musilová, Markéta Oplištilová, Veronika Palmová, Jaroslav Prášil, Jana Skálová, Vojtěch Starosta, Anna Symonová, Jan Vítek, Robert Vlasák, Romana Zborovjanová</div>
+                <div class="ex-curator">Kurátor/ka: Adéla Machová</div>
+              </div>
+
+              <!-- 2015 -->
+              <h3 id="y-2015" class="archive-year-heading">2015</h3>
+              <div class="t-year" role="listitem"><div class="stacked-date">8. 12. 2015<span class="date-divider">—</span>29. 1. 2016</div></div>
+              <div class="t-body">
+                <div class="ex-title">Naděžda Plíšková</div>
+                <div class="ex-author">Naděžda Plíšková</div>
+                <div class="ex-curator">Kurátor/ka: Marianna Placáková</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">15. 8. 2015<span class="date-divider">—</span>13. 11. 2015</div></div>
+              <div class="t-body">
+                <div class="ex-title">Tady a později</div>
+                <div class="ex-author">Zbyněk Sedlecký</div>
+                <div class="ex-curator">Kurátor/ka: Petr Vaňous</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">3. 9. 2015<span class="date-divider">—</span>9. 10. 2015</div></div>
+              <div class="t-body">
+                <div class="ex-title">CRASHTEST 5: Transmise</div>
+                <div class="ex-author">Petra Bojanová, Ladislav Ducháček, Wenye Fang, Michal Gabriel, Monika Horčicová, Vincent CY Chen, Jiří Kamenskich, Adam Krhánek, Petr Křivák, Monica Lai, Vilis Lipins, Eva Lukešová, Tomáš MEdek, Nikola Mojsl, Tomáš Pavlacký, Cameron Ritchie, Markéta Schiffnederová, Jana Schlosserová, Erica Spinozzi, Hana Svobodová, Jan Šebánek, Devin Tamiazzo, Helena Tůmová, Dušan Váňa, Marie Videmanová, Li Yao Xinhai Zhao, Ilona Župková</div>
+                <div class="ex-curator">Kurátor/ka: Magdalena Brachtlová, Terezie Hlaváčková, Ludmila Homutová, Anna Stárková, Daniela Sulíková, Petr Sýkora, Kateřina Turková, Theodora Wittlichová</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">27. 8. 2015<span class="date-divider">—</span>25. 9. 2015</div></div>
+              <div class="t-body">
+                <div class="ex-title">Mezičas</div>
+                <div class="ex-author">Míla Preslová, Michaela Maupicová</div>
+                <div class="ex-curator">Kurátor/ka: Petr Vaňous</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">21. 4. 2015<span class="date-divider">—</span>15. 5. 2015</div></div>
+              <div class="t-body">
+                <div class="ex-title">Postup</div>
+                <div class="ex-author">Alena Kučerová</div>
+                <div class="ex-curator">Kurátor/ka: Lucie Šiklová</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">8. 4. 2015<span class="date-divider">—</span>30. 4. 2015</div></div>
+              <div class="t-body">
+                <div class="ex-title">Jehla v kupce sena</div>
+                <div class="ex-author">Jonáš Czesaný, Veronika Holcová, Jakub Hubálek, Jakub Janovský, Julia Koudela Hansen-Löve, Andrea Lédlová, Dana Sahánková, Adriana Sarnová, Adéla Součková, Jakub Tomáš, Vladimír Véla</div>
+                <div class="ex-curator">Kurátor/ka: Petr Vaňous</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">3. 3. 2015<span class="date-divider">—</span>27. 3. 2015</div></div>
+              <div class="t-body">
+                <div class="ex-title">Penck - Typlt</div>
+                <div class="ex-author">A. R. Penck, Lubomír Typlt</div>
+                <div class="ex-curator">Kurátor/ka: Petr Vaňous</div>
+              </div>
+
+              <!-- 2014 -->
+              <h3 id="y-2014" class="archive-year-heading">2014</h3>
+              <div class="t-year" role="listitem"><div class="stacked-date">9. 12. 2014<span class="date-divider">—</span>23. 1. 2015</div></div>
+              <div class="t-body">
+                <div class="ex-title">120 let Topičova salonu 1894-2014</div>
+                <div class="ex-author">Mikoláš Aleš, Vojtěch Bartoněk, Zdenka Braunerová, Antonín Häusler, Eduard Herold, Karel Hlaváček, Arnošt Hofbauer, Oldřich Homoláč, Otakar Lebeda, Adolf Liebscher, Luděk Marold, Karel Vítězslav Mašek, Alfons Mucha, Ladislav Novák, Viktor Oliva, Maxmilián Pirner, Jan Preisler, Félicien Rops, Sascha Schneider, Viktor Stretti, Stanislav Sucharda, Karel Šimůnek, Karel Špillar, Max Švabinský, Henri de Toulouse-Lautrec, Heinrich Johann Vogeler, Adolf Wiesner, František Bohumír Zvěřina</div>
+                <div class="ex-curator">Kurátor/ka: Pavel Vašíček</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">14. 10. 2014<span class="date-divider">—</span>14. 11. 2014</div></div>
+              <div class="t-body">
+                <div class="ex-title">Skryté energie kosmologického prostoru</div>
+                <div class="ex-author">Luděk Filipský</div>
+                <div class="ex-curator">Kurátor/ka: Petr Svoboda</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">7. 10. 2014<span class="date-divider">—</span>7. 11. 2014</div></div>
+              <div class="t-body">
+                <div class="ex-title">Ariadnina nit</div>
+                <div class="ex-author">Karol Ondreička</div>
+                <div class="ex-curator">Kurátor/ka: Richard Drury</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">2. 9. 2014<span class="date-divider">—</span>19. 9. 2014</div></div>
+              <div class="t-body">
+                <div class="ex-title">CRASHTEST 4: Bože, cože?!</div>
+                <div class="ex-author">Petra Buzková, Jakub Čermák, Zuzana Kleinerová, Renáta Mia Köhlerová, Štěpán Křížek, Nina Mikušková, Tomáš Moravanský, Johana Němečková, Barbora Pokorná, Petr Pololáník, Nela Richterová, Jana Schlosserová, Martin Sabon Sněhota, Klára Švachulová, Vojtěch Vlček</div>
+                <div class="ex-curator">Kurátor/ka: Jana Mlčochová, Markéta Nováčková, Anna Stárková, Kateřina Turková</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">15. 7. 2014<span class="date-divider">—</span>15. 8. 2014</div></div>
+              <div class="t-body">
+                <div class="ex-title">Dialog sil - souzvuk energií</div>
+                <div class="ex-author">Elsi Spitmann, František Kyncl</div>
+                <div class="ex-curator">Kurátor/ka: Petr Svoboda</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">27. 5. 2014<span class="date-divider">—</span>27. 6. 2014</div></div>
+              <div class="t-body">
+                <div class="ex-title">Ticho, které mluví</div>
+                <div class="ex-author">Jiří Štourač</div>
+                <div class="ex-curator">Kurátor/ka: Miroslava Hlaváčková</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">25. 2. 2014<span class="date-divider">—</span>11. 4. 2014</div></div>
+              <div class="t-body">
+                <div class="ex-title">Oheň do papíru nezabalíš</div>
+                <div class="ex-author">Svatopluk Klimeš</div>
+                <div class="ex-curator">Kurátor/ka: Petr Vaňous</div>
+              </div>
+
+              <!-- 2013 -->
+              <h3 id="y-2013" class="archive-year-heading">2013</h3>
+              <div class="t-year" role="listitem"><div class="stacked-date">10. 12. 2013<span class="date-divider">—</span>10. 1. 2014</div></div>
+              <div class="t-body">
+                <div class="ex-title">III. Výstava k výročí třetího Topičova salonu (1918-1936)</div>
+                <div class="ex-author">Julie Winterová Mezerová</div>
+                <div class="ex-curator">Kurátor/ka: Petra Příkazská</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">22. 10. 2013<span class="date-divider">—</span>22. 11. 2013</div></div>
+              <div class="t-body">
+                <div class="ex-title">Diskrétní transformace</div>
+                <div class="ex-author">Filip Černý, Julia Koudela Hansen-Löve, Veronika Holcová, Igor Korpaczewski, Petr Malina, Marek Meduna, Michal Nesázal, Jaromír Novotný, Jiří Petrbok, Miroslav Polách, Zbyněk Sedlecký, Pavel Šmíd</div>
+                <div class="ex-curator">Kurátor/ka: Petr Vaňous</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">20. 8. 2013<span class="date-divider">—</span>20. 9. 2013</div></div>
+              <div class="t-body">
+                <div class="ex-title">Na ostrém bodu</div>
+                <div class="ex-author">Richard Konvička</div>
+                <div class="ex-curator">Kurátor/ka: Richard Drury</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">9. 7. 2013<span class="date-divider">—</span>9. 8. 2013</div></div>
+              <div class="t-body">
+                <div class="ex-title">Suo Anno</div>
+                <div class="ex-author">Marie Filippovová</div>
+                <div class="ex-curator">Kurátor/ka: Alena Potůčková</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">28. 5. 2013<span class="date-divider">—</span>28. 6. 2013</div></div>
+              <div class="t-body">
+                <div class="ex-title">No Problem</div>
+                <div class="ex-author">Vladimír Kokolia</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">19. 2. 2013<span class="date-divider">—</span>19. 4. 2013</div></div>
+              <div class="t-body">
+                <div class="ex-title">Uměním unikat stupiditě světa. Malba z let 1966-1986 ke 20. výročí umělcova úmrtí</div>
+                <div class="ex-author">Jánuš Kubíček</div>
+                <div class="ex-curator">Kurátor/ka: Adam Kubíček, Jaromír Zemina</div>
+              </div>
+
+              <!-- 2012 -->
+              <h3 id="y-2012" class="archive-year-heading">2012</h3>
+              <div class="t-year" role="listitem"><div class="stacked-date">18. 12. 2012<span class="date-divider">—</span>18. 1. 2013</div></div>
+              <div class="t-body">
+                <div class="ex-title">Osamělost</div>
+                <div class="ex-author">Josef Žáček</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">16. 10. 2012<span class="date-divider">—</span>9. 11. 2012</div></div>
+              <div class="t-body">
+                <div class="ex-title">CRASHTEST 2012: Ne/přizpůsobiví</div>
+                <div class="ex-author">Markéta Bakešová, Jana Bernartová, Jan Bohuš, Barbora Havlíčková, Petr Hostaš, Lenka Husárková, Marek Vysušil, Romana Zborovjanová</div>
+                <div class="ex-curator">Kurátor/ka: Hedvika Černá, Alice Němcová, Anna Ostapczuk, Kamila Matějková, Jana Véghová, Michaela Zamazalová</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">28. 8. 2012<span class="date-divider">—</span>21. 9. 2012</div></div>
+              <div class="t-body">
+                <div class="ex-title">Geometrův zlý sen</div>
+                <div class="ex-author">Petr Dub, Jan Kovářík, Lukáš Machalický, Jiří Matějů, Michaela Maupicová, Pavel Mrkus, Aleš Svoboda</div>
+                <div class="ex-curator">Kurátor/ka: Petr Vaňous</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">17. 7. 2012<span class="date-divider">—</span>17. 8. 2012</div></div>
+              <div class="t-body">
+                <div class="ex-title">Fotograf</div>
+                <div class="ex-author">Alexandr Paul</div>
+                <div class="ex-curator">Kurátor/ka: Prokop Paul</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">22. 5. 2012<span class="date-divider">—</span>22. 6. 2012</div></div>
+              <div class="t-body">
+                <div class="ex-title">Metafyzická plastika</div>
+                <div class="ex-author">Jindřich Zeithamml</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">27. 3. 2012<span class="date-divider">—</span>25. 5. 2012</div></div>
+              <div class="t-body">
+                <div class="ex-title">Srdce země je ze zlata</div>
+                <div class="ex-author">Karel Šlenger</div>
+                <div class="ex-curator">Kurátor/ka: Lucie Šiklová</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">24. 1. 2012<span class="date-divider">—</span>2. 3. 2012</div></div>
+              <div class="t-body">
+                <div class="ex-title">Za horizontem</div>
+                <div class="ex-author">Vladimír Novák</div>
+                <div class="ex-curator">Kurátor/ka: Ivan Neumann</div>
+              </div>
+
+              <!-- 2011 -->
+              <h3 id="y-2011" class="archive-year-heading">2011</h3>
+              <div class="t-year" role="listitem"><div class="stacked-date">13. 12. 2011<span class="date-divider">—</span>13. 1. 2012</div></div>
+              <div class="t-body">
+                <div class="ex-title">EX</div>
+                <div class="ex-author">Ondřej Maleček, David Pešat, Vladimír Véla</div>
+                <div class="ex-curator">Kurátor/ka: Petr Vaňous</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">1. 11. 2011<span class="date-divider">—</span>16. 11. 2011</div></div>
+              <div class="t-body">
+                <div class="ex-title">CRASHTEST 2011</div>
+                <div class="ex-author">Tereza Černá, Petr Drábek, Anna Drdová, Barbora Chlastáková, Lena Jakubčáková, Aneta Jeníčková, Monika Kozlíková, Vendula Kramářová, Favid Mazanec, Jana Musilová, Petr Mutina, Roman Panáček, Lyuben Stojanov Petrov, Tomáš Petřík, Lukasz Pieńkowski, Geryk Radim, Kateřina Růčková, Jakub Skokan, Adéla Šimová, Josef Šlégl, Jiří Topínka, Tereza Trautmannová, Martin Tůma, Lucie Votavová, Petr Willert, Barbora Zentková</div>
+                <div class="ex-curator">Kurátor/ka: Jana Černá, Michaela Dobešová, Zuzana Martinovská, Šárka Kobrynová, Adéla Kostkanová, Tereza Novotná, Matěj Nývlt, Martina Obrazová, Petra Patlejchová, Veronika Sellami-Žďárská, Tereza Sládečková, Lenak Turzová, Martina Váňová</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">30. 8. 2011<span class="date-divider">—</span>30. 9. 2011</div></div>
+              <div class="t-body">
+                <div class="ex-title">Liberec III</div>
+                <div class="ex-author">Jan Merta</div>
+                <div class="ex-curator">Kurátor/ka: Jaromír Typlt</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">19. 7. 2011<span class="date-divider">—</span>18. 8. 2011</div></div>
+              <div class="t-body">
+                <div class="ex-title">Chůze lesem - zastavení</div>
+                <div class="ex-author">Marie Blabolilová</div>
+                <div class="ex-curator">Kurátor/ka: Lucie Šiklová</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">7. 6. 2011<span class="date-divider">—</span>8. 7. 2011</div></div>
+              <div class="t-body">
+                <div class="ex-title">František Pacík</div>
+                <div class="ex-author">František Pacík</div>
+                <div class="ex-curator">Kurátor/ka: Marie Klimešová</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">24. 5. 2011<span class="date-divider">—</span>26. 5. 2011</div></div>
+              <div class="t-body">
+                <div class="ex-title">Průvodce</div>
+                <div class="ex-author">Aleš Čermák, Jiří Skála</div>
+                <div class="ex-curator">Kurátor/ka: Filip Jakš</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">29. 3. 2011<span class="date-divider">—</span>29. 4. 2011</div></div>
+              <div class="t-body">
+                <div class="ex-title">Výroky</div>
+                <div class="ex-author">Dalibor Chatrný</div>
+                <div class="ex-curator">Kurátor/ka: Ilona Víchová</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">8. 2. 2011<span class="date-divider">—</span>11. 3. 2011</div></div>
+              <div class="t-body">
+                <div class="ex-title">Voda a čára</div>
+                <div class="ex-author">Daisy Mrázková</div>
+                <div class="ex-curator">Kurátor/ka: Jan Rous</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">17. 1. 2011<span class="date-divider">—</span>28. 1. 2011</div></div>
+              <div class="t-body">
+                <div class="ex-title">Far From Sure. Satyrův salon u Topiče</div>
+                <div class="ex-author">Skupinová výstava</div>
+              </div>
+
+              <!-- 2010 -->
+              <h3 id="y-2010" class="archive-year-heading">2010</h3>
+              <div class="t-year" role="listitem"><div class="stacked-date">7. 12. 2010<span class="date-divider">—</span>7. 1. 2011</div></div>
+              <div class="t-body">
+                <div class="ex-title">Dvě hodiny patnáct. Mladé umění z Drážďan a Prahy</div>
+                <div class="ex-author">Anne Boese, Nicolás Dupont, Tony Franz, Nina Holzweg, Matěj Lipavský, Eugenia Mora, David Pešat, Petra Polifková, Adam Štech, Falk Toepfer, Benedik Tolar</div>
+                <div class="ex-curator">Kurátor/ka: Petr Vaňous</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">29. 9. 2010<span class="date-divider">—</span>27. 10. 2010</div></div>
+              <div class="t-body">
+                <div class="ex-title">Jitka Svobodová</div>
+                <div class="ex-author">Kouře a věci</div>
+                <div class="ex-curator">Kurátor/ka: Petr Vaňous</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">17. 8. 2010<span class="date-divider">—</span>17. 9. 2010</div></div>
+              <div class="t-body">
+                <div class="ex-title">Situace figury</div>
+                <div class="ex-author">Rudolf Volráb</div>
+                <div class="ex-curator">Kurátor/ka: Jan Rous</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">29. 6. 2010<span class="date-divider">—</span>6. 8. 2010</div></div>
+              <div class="t-body">
+                <div class="ex-title">Prostor pro světlo a řeč přírody</div>
+                <div class="ex-author">Olga Karlíková</div>
+                <div class="ex-curator">Kurátor/ka: Jan Rous</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">11. 5. 2010<span class="date-divider">—</span>11. 6. 2010</div></div>
+              <div class="t-body">
+                <div class="ex-title">Krajina</div>
+                <div class="ex-author">Zorka Ságlová, Jan Ságl</div>
+                <div class="ex-curator">Kurátor/ka: Magdalena Juříková</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">9. 3. 2010<span class="date-divider">—</span>9. 4. 2010</div></div>
+              <div class="t-body">
+                <div class="ex-title">Setkání</div>
+                <div class="ex-author">Jitka Válová</div>
+                <div class="ex-curator">Kurátor/ka: Alena Potůčková</div>
+              </div>
+
+              <!-- 2009 -->
+              <h3 id="y-2009" class="archive-year-heading">2009</h3>
+              <div class="t-year" role="listitem"><div class="stacked-date">8. 12. 2009<span class="date-divider">—</span>22. 1. 2010</div></div>
+              <div class="t-body">
+                <div class="ex-title">Černobílé Zlaté město 09</div>
+                <div class="ex-author">Jitka Anlaufová, Daniel Hanzlík, Markéta Hlinovská, Pavel Hošek, Jiří Matějů, Ivan Pinkava, Robert Šalanda, Lubomír Typlt</div>
+                <div class="ex-curator">Kurátor/ka: Petr Vaňous</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">13. 10. 2009<span class="date-divider">—</span>13. 11. 2009</div></div>
+              <div class="t-body">
+                <div class="ex-title">Hledání rovnováhy</div>
+                <div class="ex-author">Marius Kotrba</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">4. 8. 2009<span class="date-divider">—</span>11. 9. 2009</div></div>
+              <div class="t-body">
+                <div class="ex-title">Dílem průřez</div>
+                <div class="ex-author">Petr Veselý</div>
+                <div class="ex-curator">Kurátor/ka: Marek Pokorný</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">26. 5. 2009<span class="date-divider">—</span>3. 7. 2009</div></div>
+              <div class="t-body">
+                <div class="ex-title">Obrazy a kresby</div>
+                <div class="ex-author">Antonín Střížek</div>
+                <div class="ex-curator">Kurátor/ka: Jan Rous</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">7. 4. 2009<span class="date-divider">—</span>30. 4. 2009</div></div>
+              <div class="t-body">
+                <div class="ex-title">Fotografie - paměť všedního</div>
+                <div class="ex-author">Dagmar Hochová</div>
+                <div class="ex-curator">Kurátor/ka: Jan Rous</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">10. 2. 2009<span class="date-divider">—</span>6. 3. 2009</div></div>
+              <div class="t-body">
+                <div class="ex-title">Návraty</div>
+                <div class="ex-author">Otakar Slavík</div>
+                <div class="ex-curator">Kurátor/ka: Jan Rous</div>
+              </div>
+
+              <!-- 2008 -->
+              <h3 id="y-2008" class="archive-year-heading">2008</h3>
+              <div class="t-year" role="listitem"><div class="stacked-date">25. 11. 2008<span class="date-divider">—</span>9. 1. 2009</div></div>
+              <div class="t-body">
+                <div class="ex-title">INtroCITY / Nukleární rodina</div>
+                <div class="ex-author">Jonáš Czesaný, Jana Farmanová, René Hábl, Marta Hošková-Hošťálková, Jakub Janovský, Jana Kasalová, KW, Markéta Korečková, Jaromír Novotný, Jiří Petrbok, Dagmar Šubrtová</div>
+                <div class="ex-curator">Kurátor/ka: Petr Vaňous</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">14. 10. 2008<span class="date-divider">—</span>14. 11. 2008</div></div>
+              <div class="t-body">
+                <div class="ex-title">Krajiny možného konání</div>
+                <div class="ex-author">Čestmír Kafka</div>
+                <div class="ex-curator">Kurátor/ka: Ivan Kafka, Jan Rous</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">22. 7. 2008<span class="date-divider">—</span>12. 9. 2008</div></div>
+              <div class="t-body">
+                <div class="ex-title">Proměny krajiny / konstrukce prostoru</div>
+                <div class="ex-author">Ivan Ouhel</div>
+                <div class="ex-curator">Kurátor/ka: Jan Rous</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">27. 5. 2008<span class="date-divider">—</span>4. 7. 2008</div></div>
+              <div class="t-body">
+                <div class="ex-title">Akce a proměna geometrické skladby</div>
+                <div class="ex-author">Hugo Demartini</div>
+                <div class="ex-curator">Kurátor/ka: Jiří Valoch</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">1. 4. 2008<span class="date-divider">—</span>30. 4. 2008</div></div>
+              <div class="t-body">
+                <div class="ex-title">Místo, krajina, obraz</div>
+                <div class="ex-author">Karel Valter</div>
+                <div class="ex-curator">Kurátor/ka: Jan Rous</div>
+              </div>
+
+              <div class="t-year" role="listitem"><div class="stacked-date">19. 2. 2008<span class="date-divider">—</span>21. 3. 2008</div></div>
+              <div class="t-body">
+                <div class="ex-title">Prostor mezi slovem a obrazem</div>
+                <div class="ex-author">Jiří Kolář</div>
+                <div class="ex-curator">Kurátor/ka: Jan Rous</div>
+              </div>
+            </div>
+          </div>
+
+          <div data-lang="en" class="hidden-lang">
+            <p class="t-body" style="margin-bottom: 24px;">
+              Complete archive of all 117 exhibitions held by the Exhibition Society TS (Topič Salon / Galerie Jilská 14).
+            </p>
+            <div class="timeline" role="list">
+              <div class="t-year" role="listitem">2008–2027</div>
+              <div class="t-body">Complete chronological listing of all 117 monographic and group exhibitions, international projects, and student CRASHTEST cycles.</div>
+            </div>
+          </div>
+        </section>
+
+        <div class="page-footer" role="contentinfo">
+          <div data-lang="cs">© Jilská 14</div>
+          <div data-lang="en" class="hidden-lang">© Jilska 14</div>
+          <a href="index.html" data-lang="cs">Zpět na úvod</a>
+          <a href="index.html" data-lang="en" class="hidden-lang">Back to home</a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+	<button id="back-to-top-btn" aria-label="Zpět nahoru / Scroll to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+  <script src="index.js"></script>
+</body>
+</html>
