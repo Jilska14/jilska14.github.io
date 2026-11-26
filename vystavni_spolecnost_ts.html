@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <title>Výstavní společnost TS — Jilská 14</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap" rel="stylesheet" />
+
+  <link rel="icon" href="img/gj14.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="img/gj14.ico" type="image/x-icon" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Přeskočit na obsah / Skip to content</a>
+
+  <button id="hamburger-btn"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          class="hamburger-btn"
+          aria-haspopup="true">
+    <span></span><span></span><span></span>
+  </button>
+
+  <div class="logo" aria-label="Jilska Logo">
+    <a href="index.html" aria-label="Zpět na úvod / Back to home">
+      <img src="img/logo-jilska.png" alt="Jilská 14" />
+    </a>
+  </div>
+
+  <div class="page-wrap">
+    <header>
+      <nav id="primary-navigation" role="navigation" aria-label="Primary navigation" class="nav-menu">
+        <ul>
+          <li><a href="index.html#" data-lang="cs">Informace pro návštěvníky</a><a href="index.html#" data-lang="en" class="hidden-lang">Information for Visitors</a></li>
+          <li><a href="vystavy.html" data-lang="cs">Výstavy</a><a href="vystavy.html" data-lang="en" class="hidden-lang">Exhibitions</a></li>
+          <li><a href="index.html#" data-lang="cs">Doprovodné programy</a><a href="index.html#" data-lang="en" class="hidden-lang">Additional Programs</a></li>
+          <li><a href="index.html#" data-lang="cs">Umělci</a><a href="index.html#" data-lang="en" class="hidden-lang">Artists</a></li>
+          <li><a href="vystavni_spolecnost_ts.html" data-lang="cs" aria-current="page">Výstavní společnost TS</a><a href="vystavni_spolecnost_ts.html" data-lang="en" class="hidden-lang" aria-current="page">Exhibition Society TS</a></li>
+          <li><a href="index.html#" data-lang="cs">Kontakty</a><a href="index.html#" data-lang="en" class="hidden-lang">Contacts</a></li>
+        </ul>
+      </nav>
+
+      <div class="lang-search-container">
+        <button id="lang-toggle-desktop" aria-label="Přepnout jazyk / Switch language">
+          <span class="dot" aria-hidden="true"></span>
+          <span id="lang-label-desktop">EN</span>
+        </button>
+
+        <div class="search-container-desktop" style="position: relative;">
+          <button id="search-icon-btn-desktop" aria-label="Open search" aria-haspopup="listbox" aria-expanded="false" aria-controls="search-dropdown-desktop">
+            <svg viewBox="0 0 45 45" aria-hidden="true" focusable="false" width="18" height="18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M43.462,35.997l-11.401-11.37c1.197-2.352,1.845-4.962,1.845-7.676c0-4.528-1.765-8.785-4.966-11.986C25.739,1.763,21.481,0,16.953,0C12.426,0,8.167,1.763,4.966,4.965C1.765,8.167,0,12.424,0,16.952
+       c0,4.528,1.764,8.785,4.966,11.986c3.201,3.202,7.459,4.965,11.986,4.965c2.714,0,5.325-0.646,7.675-1.842l11.371,11.402
+       c1.029,1.029,2.382,1.546,3.732,1.546c1.35,0,2.701-0.517,3.731-1.546C45.524,41.4,45.524,38.059,43.462,35.997z 
+       M9.444,24.459c-2.005-2.006-3.109-4.671-3.109-7.507s1.104-5.502,3.11-7.508c2.005-2.005,4.671-3.11,7.507-3.11s5.502,1.104,7.508,3.11
+       c2.005,2.005,3.11,4.671,3.11,7.507s-1.105,5.502-3.11,7.508c-2.006,2.005-4.673,3.109-7.508,3.109
+       C14.117,27.568,11.451,26.465,9.444,24.459z"/>
+            </svg>
+          </button>
+
+          <div class="search-dropdown" id="search-dropdown-desktop" role="dialog" aria-modal="true" aria-label="Search box" tabindex="-1">
+            <input type="search" id="search-input-desktop" class="search-input" placeholder="..." aria-label="Search exhibitions and artists" aria-autocomplete="list" aria-controls="search-results-desktop" aria-activedescendant="" />
+            <ul id="search-results-desktop" class="search-results" role="listbox" tabindex="-1"></ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="page-main" role="main" tabindex="-1" aria-label="Výstavní společnost TS">
+      <div class="text-background-blur">
+        <h1 data-lang="cs">Výstavní společnost TS</h1>
+        <h1 data-lang="en" class="hidden-lang">Exhibition Society TS</h1>
+
+        <section aria-label="Mission">
+          <div data-lang="cs">
+            <p class="t-body">
+              Výstavní společnost TS, z.s. je spolek vzniklý v roce 2007 za účelem provozování výstavní a další kulturní činnosti, mezi jeho další cíle patří vydavatelská činnost. V letech 2007-2020 působil spolek na adrese Národní 9, Praha 1 v Topičově salonu a známé prostory Salonu 13 let umělecky naplňoval. V roce 2021 se společnost přesunula o pár bloků dále a našla své nové působiště na adrese Jilská 14, Praha 1 v prostorách bývalé galerie U Prstenu. Dramaturgie a myšlenky však pokračují v původní linii.
+            </p>
+          </div>
+          <div data-lang="en" class="hidden-lang">
+            <p class="t-body">
+              Exhibition Society TS, z.s. supports the presentation of contemporary art and creates space for exhibitions, meetings,
+              discussions, and public programmes. Galerie Jilská 14 is one of the society’s long-term activities.
+            </p>
+          </div>
+        </section>
+
+        <section aria-label="Legal">
+          <div data-lang="cs">
+            <h2 style="letter-spacing:0.16em;text-transform:uppercase;color:#111;margin-top:28px;">Organizační informace</h2>
+            <p class="t-body"> Jednatelka: Anna Kučerová<br>
+              <br>
+              Členky Výboru: Zuzana Šálanská a Kateřina Turková<br>
+  <br>
+              Členové: Petr Vaňous, Milan Pech, Lucie Šiklová, Lucie Preissová, Eva Holá, Matěj Mauric<br>
+  <br>
+              Čestné členství: Jiří Kuthan, Jaroslava Šiktancová, Marie Klimešová, Karel Kerlický, Jan Rous, Ilona Víchová<br>
+  <br>
+              Vzpomínka na zasloužilé členy: Pavel Vašíček, Zdeněk Vašíček, Marius Kotrba, Miroslava Hlaváčková, Pavel Preiss<br>
+  <br>
+              Spolupráce:
+              Magdalena Juříková, Petr Rezek, Jiří Valoch, Jaromír Zemina, Petr Zhoř, Jindřich Nosek, Irena Lehkoživová, Barbora Špičáková, Karel Oujezdský, Marianna Placáková, Adéla Machová, Alice Hekrdlová, Petr Šámal, Petr Štembera, Tatjana Štemberová, Tomáš Winter, Jakub Myslín, Karel Karbulka, Petr Nusko, Iva Mladičová, Jana Cermanová, Hana Larvová, Petr Wittlich, Richard Drury, Michal Janata, Ivan Neumann, Marek Pokorný, Lukáš Machalický, Karel Srp, Eva Forstová, Marta Cabanová, Helena Šantavá, Miriam Barnitz, Marie Birchler-Suchánková, Tomáš Pospiszyl, Anna Vartecká, Vojtěch Míča, Vladimír Kokolia, Blanka Jiráčková, Adam Borzič, Magdalena Nerudová, Kateřina Lohrová, Barbora Hlaváčová, Emma Hanzlíková, Krištof Hanzlík, Eva Bendová, Eva Červená, Adam Helma, Antonín-Šimon Stárka, Zuzana Nevolová, Victoria Avdeenko, Alexander Hradecký, Hedvika Netopilová, Lenka Chýlová, Lenka Kubelová, Martin Nitsche, Dena Shottenkirk, Klára Jirsová, Benedikt Mohelník, Svatopluk Klimeš, Ivo Binder, Jana Chytilová, Jan H. Vitvar, Michaela Bittner Hochmanová, Norbert Schmidt, Filip Boháč, Ondřej Trepeš, David Šálanský, Jiří Kučera, Jan Čumlivski, Ida Chuchlíková, Jiří Janoušek, Ivan Bok, Michal Janata, Martin Rydrych. </p>
+          </div>
+          <div data-lang="en" class="hidden-lang">
+            <h2 style="letter-spacing:0.16em;text-transform:uppercase;color:#111;margin-top:28px;">Organization</h2>
+            <p class="t-body">
+              Exhibition Society TS, z.s. • Galerie Jilská 14 • Prague 1 — Old Town<br />
+              For current contacts and bank details, use the Contacts section on the homepage.
+            </p>
+          </div>
+        </section>
+
+        <section aria-label="Timeline">
+          <div data-lang="cs">
+            <h2 style="letter-spacing:0.16em;text-transform:uppercase;color:#111;margin-top:28px;">Historie (časová osa)</h2>
+            <div class="timeline" role="list">
+              <div class="t-year" role="listitem">2008</div>
+              <div class="t-body">Program byl v prvním roce budován na půdorysu tvorby pro české umění nesporných osobností, viděných ale v určitém kontextu, jako třeba v blízké tematice díla Jiřího Koláře, Karla Valtera, Čestmíra Kafky, Ivana Ouhela, Hugo Demartiniho (koncept – místo, krajina, příroda). Výstavní soubory umělců byly představovány tematicky, ne průřezově nebo v nějaké obecné prezentaci. Na tyto výstavy programově navázala v projektu INtroCITY skupinová výstava mladých autorů, vybraných kurátorem Petrem Vaňousem.</div>
+
+              <div class="t-year" role="listitem">2009</div>
+              <div class="t-body">Základním tématem výstavního programu v Topičově salonu v roce 2009 byl člověk a jeho prostor. Program tak navázal a rozvíjel koncepci z roku 2008, která zvažovala různé způsoby pojetí krajiny a prostoru jako místa možného konání, prostoru lidské aktivity. Výstavami Otakara Slavíka, Dagmar Hochové, Antonína Střížka, Petra Veselého, Máriuse Kotrby či mladých autorů byly zastoupeny výstavy malířské, sochařské, fotografické, i nová média, a to jak projekty monografické, tak koncepční, hledající svorníky názorově a formálně různorodé tvorby současné mladé i střední generace (Černobílé zlaté město 09).</div>
+
+              <div class="t-year" role="listitem">2010</div>
+              <div class="t-body">V návaznosti na předchozí sezony se program ve třetím roce vrátil k tématu krajiny a lidské figury, které ukázal v odlišných reflexích. Na příklad projekt výstavy Jitky Válové představil její dílo ve zhuštěném výběru a alespoň zčásti v kontextu s tvorbou její sestry Květy. Výstava manželů Zorky a Jana Ságlových otevřela prostor ke konfrontaci jejich specifického pohledu na krajinu. Strukturální obrazy pohybu a světla Olgy Karlíkové připomněly autorku, která svou tvorbou přesáhla místní kontext. Především její záznamy zvuků přírody jsou v českém prostředí nezaměnitelné. Výstava Rudolfa Volrába připomněla osobnost, která nebyla dlouho výstavně zmiňována, jejíž vliv je však patrný u řady českých autorů 2. poloviny 20. století. Jitka Svobodová ukázala zejména autorčiny současné práce snažící se postihnout nestabilní nehmotné stavy, kouře, mraky. Výstava Dvě hodiny patnáct/ Zweistundenfünfzehn – představila mladé umělce z Drážďan a z Prahy.</div>
+
+              <div class="t-year" role="listitem">2011</div>
+              <div class="t-body">Zatímco předchozí ročníky rozvíjely především téma figury a jejího prostoru, soustředil se program v roce 2011 na citlivost a citovost, diference emocionálního uchopení dějů v určitém místě za určitých okolností a expresivitu jejich vyjádření. Jestliže u Daisy Mrázkové jsme mohli pozorovat zejména citlivost a hledání dokonalého a přitom osobního vyjádření barvou či tvarem, u Jana Merty sice nenápadně, ale přitom jistě, se projevila citovost (vztah k místu, osobě, či mravnosti), vymezená jeho citlivostí malířskou. U hlav Františka Pacíka byla citovost a expresivita převažující, podobně tomu bylo i na výstavě Dalibora Chatrného, který se soustředil na práci s textem. Marie Blabolilová se k citlivosti obracela ve svých Zastaveních a tajemných krajinách a zátiších plných tichého chvění. Výstava současných mladých autorů (Vladimír Véla, Viktor Pešat a Ondřej Maleček) již svým výstavním názvem EX naznačila vyšší míru citovosti až exaltovanosti.</div>
+
+              <div class="t-year" role="listitem">2012</div>
+              <div class="t-body">Téma předchozího ročníku bylo rozvíjeno i v dalším roce. Dílo vystavujících autorů o něm osobitě pojednává v různé míře. Jestliže u Jindřicha Zeithammla jsme mohli pozorovat zejména citlivost a hledání dokonalého, a přitom osobního vyjádření barvou či tvarem, v obrazech Vladimíra Nováka je vždy spjata krajina s člověkem. Je to otázka existenciální, a nejen rozumová, ale především citová. Stejně tak u Josefa Žáčka, v jehož případě jeho citovost, sice obsahově zašifrovaná, je reflexí dějů – situací, jimiž je bezprostředně obklopen a ke kterým vyjadřuje svůj kritický postoj. Výstava Geometrův zlý sen, koncipovaná Petrem Vaňousem, představila autory několika generací, kteří se ve své vizuální práci věnují revizi tradiční geometrie a objevování jejích nových forem. První z výstav o jednotlivých etapách Topičova salonu, výstava Karla Šlengera, nyní téměř neznámého, ale ve 4. Topičově salonu velmi úspěšného autora, připomněla 75. výročí vzniku 4. Topičova salonu. V dobovém kontextu s touto výstavou proběhla i fotografická výstava Alexandra Paula, která ilustrovala na příběhu významného fotografického ateliéru, firmy a osobnosti nejen dobovou atmosféru, ale i tehdejší vynikající úroveň české fotografie.</div>
+
+              <div class="t-year" role="listitem">2013</div>
+              <div class="t-body">Výběr autorů na rok 2013 vyzdvihuje téma hledání osobního řádu v dílech umělců formálně různorodých – od sisyfovského snažení Jánuše Kubíčka stále hledat a nacházet výtvarný tvar, výraz a barevnou i tvaroslovnou harmonii, přes vcítění se do řádu přírody v obrazech Vladimíra Kokolii, přes chaos a řád, emoce a racionalitu v grafických pracích a pracích na papíře Marie Filippovové, nově, jako náhradu v programu, osobní hledání a poznání Richarda Konvičky. Toto hledání vlastního, osobního řádu spolu se řádem obecně platným, je završeno výstavou Diskrétní transformace, v níž kurátor Petr Vaňous vnímá echo, náznaky nového procesu, v němž postupně zanikají tradiční představy o uměleckých normách a místo nich nastupují rozmanité trajektorie individuálních autorských cest, kterými však jako by prosvítaly obrysy jakési nové zákonitosti. Výstavní plán 2013 připomíná 95. výročí vzniku 3. Topičova salonu (1918 – 1936) výstavou prací Julie Winterové-Mezerové, rodačky z Úpice, která byla významnou ženskou malířskou meziválečného období a v Topičově salonu za svého života dvakrát vystavovala.</div>
+
+              <div class="t-year" role="listitem">2014</div>
+              <div class="t-body">Výstavní plán roku 2014 se zaměřil na spirituální tématiku a hledání duchovních hodnot. Filosofické a morální otázky položil divákům svou přehlídkou Svatopluk Klimeš a doutil návštěvníky hledět do vlastního nitra. Výstavou Jiřího Štourače se zas podařilo poukázat na ticho a chvění, křesťanské hodnoty i rodinné snímky z běžného života, v nichž Boha lze spatřovat každodenně. Společná výstava manželů Elsi a Františka Kynclových se v Topičově salonu otevřel prostor pro hledání řádu a schémat vzniku světa a jeho přirozených zákonitostí. Čtvrtý ročník studentského projektu CRASHTEST nazvaný Bože, cože?! pátral v nejaktuálnějším uměleckém prostředí po spirituálních hodnotách a přechodu do jiných světů. Karol Ondreička probudil fantazii návštěvníků a zavedl otázky do světa Hieronyma Bosche. Kosmologií a řádem se zabýval ve své výstavě i Luděk Filipský, který v Topičově salonu vystavil obrazy i prostorové instalace. Rok ukončila velkolepá jubilejní výstava obracející se k výročí 120 let Topičova salonu. Svou muzeální a historizující instalací evokovala původní Salon a představila nejvýznamnější umělce, kteří v galerii svého času vystavovali.</div>
+
+              <div class="t-year" role="listitem">2015</div>
+              <div class="t-body">Rok přeměny a přerodu byl započat výstavou A. R. Penck a Lubomír Typlt, na níž se v jednom sále potkal učitel se svým žákem. Druhou výstavou roku se stala skupinová výstava nejmladší a střední umělecké generace nazvaná Jehla v kupce sena. O přeměnu se pokusila i Alena Kučerová výstavou postup, kde bylo poukázáno na celoživotní dílo autorky a výstava se stala poctou umělkyni. Michaela Maupicová společně s Mílou Preslovou vnesly do roku Ženy a proměny světlo svou vstavou Mezičas, na které byly k vidění obrazy, plastiky a fotografie. Další ročník CRASHTESTU: Transmise se zabýval 3D tiskem a změnami v pojetí tradičních uměleckých oborů. Výstava Zbyňka Sedleckého byla zacílena na nejnovější autorovu tvorbu a jeho zájem o „fotografické“ zachycení skutečnosti a její transformaci do obrazu. Rok zakončila jublejní výstava k období let 1950-1991, kdy galerie fungovala pod hlavičkou nakladatelství Československého spisovatele. Pro důstojnou oslavu a dovršení roku transformace a Ženy byla vybrána Naděžda Plíšková. Její tvorba byla představena plastikami a grafickými pracemi.</div>
+
+              <div class="t-year" role="listitem">2016</div>
+              <div class="t-body">Rok byl zahájen skupinovou výstavou maldých umělců Materiálový experiment. Následovaly monumentální a haptické Statuofilie Jana Kováříka, betonové sochy a magické abstraktní krajiny Tomáše Polcara, Intimita obrazů a kreseb Anežky Kovalové, tvrdost, žert a ženskost Margity Titlové Ylovsky a barevné nekonceptuální malby Miloslava Mouchy. rok byl doplněn o další ročník studentské výstavy CRASHTEST6, která se obrátila k performance a happeningu.</div>
+
+              <div class="t-year" role="listitem">2017</div>
+              <div class="t-body">Další sezóna v Topičově salonu byla zahájena betonovými sochami a jemnými grafikami Moniky Immrové. Pokračoval Jindřich Růžička, který byl představen jako malíř a fotograf. Sedmý ročník CRASHTEST: Rekonstrukce AVU 93/94 se zaměřil na rekonstrukci diplomových prací dnešní střední generace. Léto naplnil Roman Trabura svými nejnovějšími plátny. Program pokračoval výstavou sochařky Ellen Jilemnické, skupinovou výstavou Petra Vaňouse s názvem Metastázy obrazu a zakončen jubilejní skupinovou přehlídkou Zaostřeno na neurčito.</div>
+
+              <div class="t-year" role="listitem">2018</div>
+              <div class="t-body">Rok 2018 byl v Topičově salonu zahájen výstavou k 70. narozeninám malíře a sochaře Zdenka Hůly. Program pokračoval malířskou výstavou Aleše Růžičky, uskutečnil se též osmý ročník studentského projektu CRASHTEST. Letní měsíce naplnila putovní mezinárodní výstava Černý romantismus a osobitá výstava sochařky, grafičky a malířky Jaromíry Němcové. Své místo v dramaturgickém plánu Společnosti měla i malířská výstava Pavla Šmída a vánoční přehlídka tvorby Jaroslava Prášila.</div>
+
+              <div class="t-year" role="listitem">2019</div>
+              <div class="t-body">V plánu výstav na zimní období byla zařazena sochařská výstava Petra Stibrala s názvem „Doma“. Na jaře jsme v Topičově salonu oslavili životní jubileum malířky Kateřina Štenclové. Následoval devátý ročník projektu CRASHTEST, který se uskuteční u Topiče již po osmé. Letní měsíce zaplnila výstava předního slovenského umělce Jána Vasilka a poté monografická výstava Mirka Kaufmana, kteří představili své nejnovější práce. Podzim byl zasvěcen výstavě skláře, malíře a performera Vladimíra Kopeckého, rok 2019 byl zakončen výstavou Jiřího Mědílka.</div>
+
+              <div class="t-year" role="listitem">2020</div>
+              <div class="t-body">V roce 2020 představila společnost tři z plánovaných sedmi výstav. Rok poznamenaný pandemií koronaviru byl odemčen sochařskou výstavou Jiřího Středy. Následovala letní výstava Igora Korpaczewského. A činnost spolku na Národní třídě byla zakončena výstavou Zdeny Kolečkové. Tradiční CRASHTEST byl přesunut do Muzea umění a designu v Benešově a vznikal ve spolupráci s organizující institucí.</div>
+
+              <div class="t-year" role="listitem">2021</div>
+              <div class="t-body">V prvních měsících roku se společnost přesunula na novou adresu Jilská 14, Praha 1. Jako první výstavy představila sochařskou výstavu Kateřiny Komm a malířsky pojatou přehlídku Jakuba Strettiho (s hostkou Josefínou Duškovou). Projekt na míru vytvořil i Jakub Janovský. Dramaturgický program pokračuje výstavou ateliéru Vladimíra Kokolii.</div>
+
+              <div class="t-year" role="listitem">2022</div>
+              <div class="t-body">Rok jsme zahájili grafickou a kresebnou výstavou Jana Měřičky. Jaro bylo v Jilské 14 ve znamení meditativních soch Luďka Míška, následovala site-specific výstava umělkyně Andrey Baštýřové. Letní měsíce jsme využili na prezentaci malíře Tadeáše Kotrby, který velkolepě architektonicky pojal galerijní prostory. Podzim byl ve znamení zvukových instalací Jana Krtičky. Rok 2022 byl zakončen přehlídkou volné tvorby Terezy Říčanové.</div>
+
+              <div class="t-year" role="listitem">2023</div>
+              <div class="t-body">Rok 2023 v Jilské 14 začal výstavou TRIP (Dávid Čerťanský, Petr Gruber, Filip Horyna, Tomáš Skála, Gabriela Slaninková), která představila dvě nejmladší generace malířů. Pokračoval realizacemi výstav CRASHTEST 12: RESONANCE, výstavou Jiřího Vovse, projektem Ze světla do tmy, ze tmy do světla Dagmar Šubrtové. Jako poslední výstavu roku jsme zahájili 100. výstavu našeho spolku, kterou jsme využili ke společné oslavě jubileí s Uměleckou besedou, která v roce 2023 oslavila 160 let existence. Na výstavě nazvané JÁ-MY jsme představili 18 autorů: Pavla Aubrechtová, Jana Budíková, Veronika Durová, Marie Filippovová, Vladimír Gebauer, Patrik Hábl, Jiří Kačer, Svatopluk Klimeš, Vladimír Kopecký, Vladimír Kovařík, Alena Kučerová, Miloslav Moucha, Miloslav Polcar, Aleš Růžička, Helena Samohelová, Kristina Vašíčková, Vladimír Véla, Jindřich Zeithamml.</div>
+
+              <div class="t-year" role="listitem">2024</div>
+              <div class="t-body">Rok 2024 zahájíme výstavou Miloše Šejna nazvanou DEPOZIT PAMĚTI, následovat bude skupinová výstava CRASHTEST 13: REALITY CHECK, v létě galerijní prostory zaplní práce Magdalena Schmidtové, podzim bude věnován site-specific projektu Patrika Pelikána, rok zakončíme výstavou ilustrátora Juraje Horvátha.</div>
+            </div>
+          </div>
+
+          <div data-lang="en" class="hidden-lang">
+            <h2 style="letter-spacing:0.16em;text-transform:uppercase;color:#111;margin-top:28px;">History (timeline)</h2>
+            <div class="timeline" role="list">
+              <div class="t-year" role="listitem">200X</div>
+              <div class="t-body">Founded / first exhibition activities. (Add exact year and factual sentence.)</div>
+
+              <div class="t-year" role="listitem">201X</div>
+              <div class="t-body">Programme expansion, collaborations with artists and institutions. (Add details.)</div>
+
+              <div class="t-year" role="listitem">202X</div>
+              <div class="t-body">Focus on public programmes, education, and community. (Add details.)</div>
+
+              <div class="t-year" role="listitem">2026</div>
+              <div class="t-body">Text update / last year summary. (Annual update.)</div>
+            </div>
+          </div>
+        </section>
+
+        <div class="page-footer" role="contentinfo">
+          <div data-lang="cs">© Jilská 14</div>
+          <div data-lang="en" class="hidden-lang">© Jilska 14</div>
+          <a href="index.html" data-lang="cs">Zpět na úvod</a>
+          <a href="index.html" data-lang="en" class="hidden-lang">Back to home</a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+	<button id="back-to-top-btn" aria-label="Zpět nahoru / Scroll to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+  <script src="index.js"></script>
+</body>
+</html>
