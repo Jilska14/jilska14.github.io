@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <title>Znění — Jilská 14 / Výstavní společnost TS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap" rel="stylesheet" />
+
+  <link rel="icon" href="../img/gj14.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="../img/gj14.ico" type="image/x-icon" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Custom styling for exhibition detail layout */
+    .exhibition-meta-box {
+      font-size: 1.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      border-bottom: 2px solid currentColor;
+      padding-bottom: 1rem;
+    }
+    .exhibition-curator {
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+	.exhibition-artist {
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .exhibition-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+    .exhibition-gallery-item {
+      width: 100%;
+      height: auto;
+      border: 1px solid rgba(0,0,0,0.15);
+      background: #eee;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Přeskočit na obsah / Skip to content</a>
+
+  <button id="hamburger-btn"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          class="hamburger-btn"
+          aria-haspopup="true">
+    <span></span><span></span><span></span>
+  </button>
+
+  <div class="logo" aria-label="Jilska Logo">
+    <a href="../index.html" aria-label="Zpět na úvod / Back to home">
+      <img src="../img/logo-jilska.png" alt="Jilská 14" />
+    </a>
+  </div>
+
+  <div class="page-wrap">
+    <header>
+      <nav id="primary-navigation" role="navigation" aria-label="Primary navigation" class="nav-menu">
+        <ul>
+          <li><a href="../index.html#" data-lang="cs">Informace pro návštěvníky</a><a href="../index.html#" data-lang="en" class="hidden-lang">Information for Visitors</a></li>
+          <li><a href="../vystavy.html" data-lang="cs">Výstavy</a><a href="../vystavy.html" data-lang="en" class="hidden-lang">Exhibitions</a></li>
+          <li><a href="../index.html#" data-lang="cs">Doprovodné programy</a><a href="../index.html#" data-lang="en" class="hidden-lang">Additional Programs</a></li>
+          <li><a href="../umelci.html" data-lang="cs">Umělci</a><a href="../umelci.html" data-lang="en" class="hidden-lang">Artists</a></li>
+          <li><a href="../vystavni_spolecnost_ts.html" data-lang="cs">Výstavní společnost TS</a><a href="../vystavni_spolecnost_ts.html" data-lang="en" class="hidden-lang">Exhibition Society TS</a></li>
+          <li><a href="../index.html#" data-lang="cs">Kontakty</a><a href="../index.html#" data-lang="en" class="hidden-lang">Contacts</a></li>
+        </ul>
+      </nav>
+
+      <div class="lang-search-container">
+        <button id="lang-toggle-desktop" aria-label="Přepnout jazyk / Switch language">
+          <span class="dot" aria-hidden="true"></span>
+          <span id="lang-label-desktop">EN</span>
+        </button>
+
+        <div class="search-container-desktop" style="position: relative;">
+          <button id="search-icon-btn-desktop" aria-label="Open search" aria-haspopup="listbox" aria-expanded="false" aria-controls="search-dropdown-desktop">
+            <svg viewBox="0 0 45 45" aria-hidden="true" focusable="false" width="18" height="18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M43.462,35.997l-11.401-11.37c1.197-2.352,1.845-4.962,1.845-7.676c0-4.528-1.765-8.785-4.966-11.986C25.739,1.763,21.481,0,16.953,0C12.426,0,8.167,1.763,4.966,4.965C1.765,8.167,0,12.424,0,16.952
+       c0,4.528,1.764,8.785,4.966,11.986c3.201,3.202,7.459,4.965,11.986,4.965c2.714,0,5.325-0.646,7.675-1.842l11.371,11.402
+       c1.029,1.029,2.382,1.546,3.732,1.546c1.35,0,2.701-0.517,3.731-1.546C45.524,41.4,45.524,38.059,43.462,35.997z 
+       M9.444,24.459c-2.005-2.006-3.109-4.671-3.109-7.507s1.104-5.502,3.11-7.508c2.005-2.005,4.671-3.11,7.507-3.11s5.502,1.104,7.508,3.11
+       c2.005,2.005,3.11,4.671,3.11,7.507s-1.105,5.502-3.11,7.508c-2.006,2.005-4.673,3.109-7.508,3.109
+       C14.117,27.568,11.451,26.465,9.444,24.459z"/>
+            </svg>
+          </button>
+
+          <div class="search-dropdown" id="search-dropdown-desktop" role="dialog" aria-modal="true" aria-label="Search box" tabindex="-1">
+            <input type="search" id="search-input-desktop" class="search-input" placeholder="..." aria-label="Search exhibitions and artists" aria-autocomplete="list" aria-controls="search-results-desktop" aria-activedescendant="" />
+            <ul id="search-results-desktop" class="search-results" role="listbox" tabindex="-1"></ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="page-main" role="main" tabindex="-1" aria-label="Znění - Výstava">
+      <div class="text-background-blur">
+        
+        <div data-lang="cs">
+          <h1 style="text-align: left; font-size: clamp(2.5rem, 4vw, 3.5rem); margin-bottom: 0.5rem;">Znění</h1>
+          <div class="exhibition-meta-box">
+            3. 12. 2026 - 20. 2. 2027<br />
+            St – So: 14 – 19 hodin
+          </div>
+          <div class="exhibition-artist">Uměleci: Václav Řezáč, Lada Semecká a Josefína Váchová</div>
+		  <div class="exhibition-curator">Kurátorka: Romana Skálová</div>
+
+          <p class="t-body" style="margin-bottom: 1.5rem;">
+            Výstava Znění představí aktuální díla tří výrazných českých sklářů (skláře a sklářek) Václava Řezáče, Lady Semecké a Josefíny Váchové. Jedná se o umělecké prostorové instalace, objekty a obrazy. Některé z nich vznikají přímo na míru galerii. Jsou vytvořeny především ze skla, zabývají se jeho vlastnostmi a pokouší jeho možnosti, experimentují s technologiemi a propojují sklářské řemeslo s výrazovými prostředky vizuálního umění. Název výstavy pak dokazuje k procesu vnímání a porozumění vystavených děl i vztahu mezi nimi vzájemně. nová dosud nevystavená díla a díla která vznikla pro konkrétní prostor – především u dominikánů.
+			<br />
+			Václava s Ladou spojují studia na UMPRUM v ateliéru Vladimíra Kopeckého a působení na TIGA Urban Glass Institute, Toyama v Japonsku. Ladu s Josefínou rezidenční pobyt pro začínající umělce na Pilchuck Glass School. Všichni tři se sešli na Katedře designu TF Technické univerzity v Liberci. Lada s Václavem v roli pedagogů. Josefína byla jejich studentkou.
+          </p>
+          <p class="t-body" style="margin-bottom: 1.5rem;">
+            Václav Řezáč (* 1977) je absolventem sklářské školy v Železném Brodě a ateliéru prof. Vladimíra Kopeckého na pražské UMPURM. Deset let působil jako manager studia tavené plastiky Zdeňka Lhotského a souběžně se věnoval vlastní volné a designérské tvorbě. Volil tehdy zejména hutnické tvarování žhavé hmoty, zálibu našel v tabulovém skle. V současné době pracuje jako pedagog v ateliéru Skla a Šperku na Katedře designu Technické univerzity v Liberci.
+<br /><br />
+Lada Semecká (*1973) patří k předním jménům českého sklářského umění. V letech 1994 až 2000 studovala v ateliéru Sklo pod vedením Vladimíra Kopeckého na pražské UMPRUM a během těchto let taktéž absolvovala studijní stáže v Rize a St. Peterburgu. V roce 2006 byla oceněna na Coburger Glaspreis, Barbara Kopellstaetter Award for Young Artist a v roce 2022 získala cenu za Mimořádný počin – Grand Prix v rámci designérského veletrhu Designblok. Od roku 2017 vede ateliér Prostorová tvorba na Fakultě umění a designu v Ústí nad Labem, působí také na Katedře designu TF TUL v Liberci. V roce 2022 s keramikem Petrem Ladou založili studio LAD.
+<br /><br />
+Josefína Váchová (* 1998) je absolventka SUPŠS Železný Brod a oboru Design skla a šperku na TF TUL v Liberci. Zatímco na střední škole se zaměřovala na malbu na sklo, na vysoké škole se její tvorba rozvinula směrem ke konceptuálnímu umění a designu. Vynikla svou bakalářskou prací, která propojila vědecký výzkum s uměleckou tvorbou. V roce 2023 získala ocenění Master of Crystal. Loni obhájila svou diplomovou práci o prostorové instalaci ze skla a papíru za kterou získala prestižní Cenu Stanislava Libenského. Experimentování s materiály je pro ni klíčové, stejně jako neustálé překonávání vlastních hranic.
+          </p>
+
+          <!-- Optional Exhibition Photo Grid -->
+          <div class="exhibition-gallery-grid">
+            <img src="img_117/vlj001.jpg" alt="Znění 1" class="exhibition-gallery-item" />
+            <img src="img_117/vlj002.jpg" alt="Znění 2" class="exhibition-gallery-item" />
+            <img src="img_117/vlj003.jpg" alt="Znění 3" class="exhibition-gallery-item" />
+			<img src="img_117/vlj004.jpg" alt="Znění 4" class="exhibition-gallery-item" />
+          </div>
+        </div>
+
+        <div data-lang="en" class="hidden-lang">
+          <h1 style="text-align: left; font-size: clamp(2.5rem, 4vw, 3.5rem); margin-bottom: 0.5rem;">Sounding</h1>
+          <div class="exhibition-meta-box">
+            Dec 3, 2026 – Feb 20, 2027<br />
+            We – Sa: 2 PM – 7 PM
+          </div>
+		  <div class="exhibition-artist">Artists: Václav Řezáč, Lada Semecká a Josefína Váchová</div>
+          <div class="exhibition-curator">Curator: Romana Skálová</div>
+
+          <p class="t-body" style="margin-bottom: 1.5rem;">
+            DOPLNIT
+          </p>
+          <p class="t-body" style="margin-bottom: 1.5rem;">
+            DOPLNIT
+          </p>
+
+          <div class="exhibition-gallery-grid">
+            <img src="img_117/vlj001.jpg" alt="Znění 1" class="exhibition-gallery-item" />
+            <img src="img_117/vlj002.jpg" alt="Znění 2" class="exhibition-gallery-item" />
+            <img src="img_117/vlj003.jpg" alt="Znění 3" class="exhibition-gallery-item" />
+			<img src="img_117/vlj004.jpg" alt="Znění 4" class="exhibition-gallery-item" />
+          </div>
+        </div>
+
+        <div class="page-footer" role="contentinfo">
+          <div data-lang="cs">© Jilská 14</div>
+          <div data-lang="en" class="hidden-lang">© Jilska 14</div>
+          <a href="../vystavy.html" data-lang="cs">Zpět na archiv výstav</a>
+          <a href="../vystavy.html" data-lang="en" class="hidden-lang">Back to exhibition archive</a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <button id="back-to-top-btn" aria-label="Zpět nahoru / Scroll to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+  <script src="index.js"></script>
+</body>
+</html>
